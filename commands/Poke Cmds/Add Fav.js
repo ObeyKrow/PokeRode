@@ -4,6 +4,7 @@ module.exports = {
     name: `addfav`,
     category: 'Information',
     description: 'Add a pokemon to your favorites',
+   permissions: [],
     usage: 'addfav [pokemonNumber]',
     aliases: [""],
     execute: async (client, message, args, prefix, guild, color, channel) => {

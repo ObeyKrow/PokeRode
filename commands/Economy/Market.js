@@ -133,7 +133,7 @@ module.exports = {
       if (data) {
 
         let embed = new MessageEmbed()
-          .setTitle(`🛒 PokeCool Market`)
+          .setTitle(`🛒 Pokérode Market`)
           .setDescription(`${message.author}\nAre you sure you want to Market Remove your **Level ${data.pokemon.level} ${data.pokemon.name.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}** (${data.pokemon.totalIV}% IV) ?`)
           .setFooter(
             'React With: ✅ To Confirm | ❌ To Abort\n',
@@ -833,7 +833,7 @@ module.exports = {
         return message.channel.send(`You cannot List your Pokémon on the Market for more than **\`10,000,000\`** Credit(s). Please Try Again!`);
       }
       let embed = new MessageEmbed()
-        .setAuthor("🛒 PokeCool Market")
+        .setAuthor("🛒 Pokérode Market")
         .setDescription(`${message.author}\nYou are now Market Listing your **Level ${user.pokemons[num].level} ${user.pokemons[num].name.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}** ( ${user.pokemons[num].totalIV}% IV).\n**Price**: ${args[2].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Credit(s)`)
         .setFooter(
           'React With: ✅ To Confirm | ❌ To Abort',
@@ -895,7 +895,7 @@ module.exports = {
       let vmsg = `Your **Level ${market[num].pokemon.level} ${market[num].pokemon.name} (${market[num].pokemon.totalIV}% IV)** has been bought by ${message.author.tag} and you have received ${new Intl.NumberFormat('en-IN').format(market[num].price)} Credit(s).`
 
       let embed = new MessageEmbed()
-        .setTitle(`🛒 PokeCool Market`)
+        .setTitle(`🛒 Pokérode Market`)
         .setDescription(`${message.author}\nAre you sure you want to Market Buy **Level ${market[num].pokemon.level} ${market[num].pokemon.name.replace("-", " ").replace(/\b\w/g, l => l.toUpperCase())}** (${market[num].pokemon.totalIV}% IV) ?\n**Price**: ${market[num].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} Credit(s)`)
         .setFooter(
           'React With: ✅ To Confirm | ❌ To Abort',
@@ -1060,7 +1060,7 @@ module.exports = {
         }
         //console.log(chunks.map(item => {item.pokemon}).join("\n"))
         embed
-          .setTitle(`🛒 PokeCool Market`)
+          .setTitle(`🛒 Pokérode Market`)
           .setColor(color)
           .setDescription((chunks[index].map((item, i) => { return `${item.pokemon.shiny ? ":star: " : ""} **Level ${item.pokemon.level} ${item.pokemon.name.replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}** | ID: ${item.pokemon.num} | IV: ${item.pokemon.totalIV}% | Price: ${new Intl.NumberFormat('en-IN').format(item.price)} Credit(s)` }).join("\n")))
         if (args[1] > chunks.length) {
@@ -1077,7 +1077,7 @@ module.exports = {
           chunks.length = 1
         }
         let embed = new Discord.MessageEmbed()
-          .setTitle(`🛒 PokeCool Market`)
+          .setTitle(`🛒 Pokérode Market`)
           .setColor(color)
           .setDescription(txt)
           .setFooter(`Showing 1-${chunks.length} of ${s.length} pokémon matching this search.`);
@@ -1106,7 +1106,7 @@ module.exports = {
           embed.setDescription(chunks[index].map((r, i) => `**Level ${r.pokemon.level} ${(r.pokemon.shiny ? "⭐" : "")}${r.pokemon.name.capitalize().replace(/-+/g, " ")}** | ID: ${no + i + 1} | IV: ${r.pokemon.totalIV}% | Price: ${new Intl.NumberFormat('en-IN').format(r.price)} Credit(s)`).join('\n') || "There is no pokemon in market")
           embed.setFooter(`Showing ${index + 1}-${chunks.length} of ${all.length} pokémon matching this search.`);
         }
-        embed.setAuthor("🛒 PokeCool Market")
+        embed.setAuthor("🛒 Pokérode Market")
         embed.setColor(color)
         return message.channel.send(embed);
       }
@@ -1124,7 +1124,7 @@ module.exports = {
         const no = ((index + 1) * 20) - 20
 
         embed
-          .setAuthor("🛒 PokeCool Market")
+          .setAuthor("🛒 Pokérode Market")
           .setColor(color)
           .setDescription(chunks[0].map((r, i) => `**Level ${r.pokemon.level} ${(r.pokemon.shiny ? "⭐" : "")}${r.pokemon.name.capitalize().replace(/-+/g, " ")}** | ID: ${i + 1} | IV: ${r.pokemon.totalIV}% | Price: ${new Intl.NumberFormat('en-IN').format(r.price)} Credit(s)`).join('\n') || "There is no pokemon in market")
           .setFooter(`Showing 1-1 of ${all.length} pokémon matching this search.`);
@@ -1133,7 +1133,7 @@ module.exports = {
       }
       else {
         embed
-          .setAuthor("🛒 PokeCool Market")
+          .setAuthor("🛒 Pokérode Market")
           .setColor(color)
           .setDescription(chunks[0].map((r, i) => `**Level ${r.pokemon.level} ${(r.pokemon.shiny ? "⭐" : "")}${r.pokemon.name.capitalize().replace(/-+/g, " ")}** | ID: ${i + 1} | IV: ${r.pokemon.totalIV}% | Price: ${new Intl.NumberFormat('en-IN').format(r.price)} Credit(s)`).join('\n') || "There is no Pokemon listed in the Markets!")
           .setFooter(`Showing 1-1 of ${all.length} pokémon matching this search.`);

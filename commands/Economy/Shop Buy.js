@@ -21,7 +21,7 @@ module.exports = {
   category: "Pokemon Commands",
   args: false,
   usage: ["shopbuy <page> <item> [amount/name]"],
-  cooldown: 3,
+  cooldown: 1,
   permissions: [],
   aliases: ["shopb", "buy"],
   execute: async (client, message, args, prefix, guild, color, channel) => {

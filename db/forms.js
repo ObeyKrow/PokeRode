@@ -132,6 +132,17 @@ module.exports = [
     spdef: 77,
     speed: 128
   },
+   {     
+     name: "core-zygarde",
+     type: "Dragon | Ground",
+     url: "https://imgur.com/hOuvdz4.png",
+     hp: 5,
+atk: 5,
+def: 5,
+spatk: 5,
+spdef: 5,
+speed: 5, 
+   },
   {
     name: "10%-zygarde",
     type: "dragon | ground",
@@ -190,8 +201,8 @@ module.exports = [
   },
   {
     name: "ultra-necrozma",
-    type: "Psychic | Steel",
-    url: "https://imgur.com/7QjygwM.png",
+    type: "Psychic | Dragon",
+    url: "https://imgur.com/DC8YsdG.png",
     hp: 97,
     atk: 167,
     def: 97,
@@ -555,7 +566,7 @@ speed: 36
    {     
      name: "ash's-greninja",
      type: "Water | Dark",
-     url: "https://cdn.discordapp.com/attachments/990646205845495808/992038002744377354/10117_1.png",
+     url: "https://imgur.com/4OvOGt7.png",
      hp: 72,
 atk: 145,
 def: 67,
@@ -750,6 +761,40 @@ spatk: 60,
 spdef: 70,
 speed: 95, 
    },
+   {     
+     name: "shadow-rider-calyrex",
+     type: "Psychic | Ghost",
+     url: "https://imgur.com/OM5crma.png",
+     hp: 100,
+atk: 85,
+def: 80,
+spatk: 165,
+spdef: 100,
+speed: 150, 
+   },
+  {     
+     name: "ice-rider-calyrex",
+     type: "Psychic | Ice",
+     url: "https://imgur.com/pb54cRu.png",
+     hp: 100,
+atk: 165,
+def: 150,
+spatk: 85,
+spdef: 130,
+speed: 50, 
+   },
+  {     
+     name: "fullmoon-lunala",
+     type: "Psychic | Ghost",
+     url: "https://imgur.com/PqMWGEc.png",
+     hp: 137,
+     atk: 113,
+     def: 89,
+     spatk: 137,
+     spdef: 107,
+     speed: 97
+   },
+ 
   
 
 

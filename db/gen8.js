@@ -530,7 +530,7 @@ module.exports = [
   },
   {
     name: "hatterene",
-    type: "Psychic | Fairy",
+    type: "Psychic | ragon",
     url: "https://imgur.com/DmGgK9n.png",
     hp: 57,
     atk: 90,
@@ -915,61 +915,7 @@ module.exports = [
      spdef: 40,
      speed: 71
    },
-    {
-     name: "ancient-zekrom",
-     type: "Steel | Rock",
-     url: "https://cdn.discordapp.com/attachments/987358755802992700/990628724674285628/zekrom_rock_type_by_tomycase_d6czvdf-fullview.png",
-     hp: 112,
-     atk: 162,
-     def: 85,
-     spatk: 72,
-     spdef: 140,
-     speed: 101
-   },
-    {
-     name: "peta-caul",
-     type: "Water | Dragon",
-     url: "https://cdn.discordapp.com/attachments/986850465423720472/990853287756570644/d7zj0d5-e4dd9d1f-468e-4a71-8a00-17f0404fd911.png",
-     hp: 160,
-     atk: 106,
-     def: 102,
-     spatk: 63,
-     spdef: 70,
-     speed: 104
-   },
-    {
-     name: "ub-laser",
-     type: "Fire | Flying",
-     url: "https://cdn.discordapp.com/attachments/987358755802992700/990622048864850030/dbu7n8j-75e4ea24-c5a2-48fc-ac69-9e84dff9d0ab.png",
-     hp: 122,
-     atk: 79,
-     def: 79,
-     spatk: 149,
-     spdef: 107,
-     speed: 29
-   },
-    {
-     name: "senec-id",
-     type: "Bug | Water",
-     url: "https://cdn.discordapp.com/attachments/987358755802992700/990622699585937438/mega_sonectid_by_smiley_fakemon_d8td7s0-pre.png",
-     hp: 72,
-     atk: 72,
-     def: 75,
-     spatk: 72,
-     spdef: 70,
-     speed: 371
-   },
-     {
-     name: "sunlord",
-     type: "Dark | Fairy",
-     url: "https://imgur.com/CG88WVN.png",
-     hp: 135,
-     atk: 85,
-     def: 125,
-     spatk: 150,
-     spdef: 150,
-     speed: 115
-   },
+
      {  
      name: "lechonk",
      type: "Normal",
@@ -981,5 +927,90 @@ module.exports = [
      spdef: 50,
      speed: 55
    }, 
+  {  
+     name: "Zacian",
+     type: "Fairy",
+     url: "https://imgur.com/qJuRWlY.png",
+     hp: 92,
+     atk: 130,
+     def: 115,
+     spatk: 80,
+     spdef: 115,
+     speed: 138
+   }, 
+   {
+     name: "core-zygarde",
+     type: "Dragon | Ground",
+     url: "https://imgur.com/hOuvdz4.png",
+     hp: 5,
+     atk: 5,
+     def: 5,
+     spatk: 5,
+     spdef: 5,
+     speed: 5
+   },
+   {
+     name: "ancient-zekrom",
+     type: "Steel | Rock",
+     id: 910,
+      url: "https://cdn.discordapp.com/attachments/987358755802992700/990628724674285628/zekrom_rock_type_by_tomycase_d6czvdf-fullview.png",
+     hp: 112,
+     atk: 162,
+     def: 85,
+     spatk: 72,
+     spdef: 140,
+     speed: 101
+   },
+   {
+     name: "future-slowpoke",
+     type: "Steel | Electric",
+     id: 915,
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/1008593267283218553/Untitled388_20220815111058.png",
+     hp: 112,
+     atk: 162,
+     def: 85,
+     spatk: 72,
+     spdef: 115,
+     speed: 80
+   },
+  {
+     name: "diamond-carbink",
+     type: "Rock",
+     id: 914,
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/1008635966350696538/Untitled381_20220814145444.png",
+     hp: 112,
+     atk: 122,
+     def: 75,
+     spatk: 72,
+     spdef: 115,
+     speed: 100
+   },
+  
+ {
+     name: "fire-ancient-oddish",
+     type: "Fire | Grass",
+     id: 912,
+     url: "https://cdn.discordapp.com/attachments/986850465423720472/1002966099341606963/Untitled337_20220729100354.png",
+     hp: 11,
+     atk: 16,
+     def: 85,
+     spatk: 72,
+     spdef: 50,
+     speed: 80
+   },
+  {
+     name: "ufo-magnezone",
+     type: "Steel | Electric",
+     id: 913,
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/1008045295722045470/Untitled379_20220813231152.png",
+     hp: 112,
+     atk: 162,
+     def: 85,
+     spatk: 72,
+     spdef: 115,
+     speed: 80
+   },
+  
+ 
  ] 
     

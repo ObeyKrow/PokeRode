@@ -9,7 +9,7 @@ const ms = require("ms");
 module.exports = {
   name: "devhint",
   description: "Get a hint to help you guess the wild pokemon's name.",
-  category: "Dev",
+  category: "developer",
   args: false,
   usage: ["devhint"],
   cooldown: 3,

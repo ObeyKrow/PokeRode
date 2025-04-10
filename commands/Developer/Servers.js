@@ -2,8 +2,9 @@ const { Client, MessageEmbed, version } = require("discord.js");
 
 module.exports = {
   name: "servers",
-  category: "developer",
+  category: "Dev",
   description: "Know about the servers",
+  permissions: [],
   execute: async (client, message, args, prefix, guild, color, channel) => {
     await message.delete();
 

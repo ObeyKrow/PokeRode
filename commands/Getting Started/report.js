@@ -4,7 +4,7 @@ const { get } = require('request-promise-native');
 const User = require('../../models/user.js');
 const Guild = require('../../models/guild.js');
 const ms = require("ms");
-const webhook1 = new Discord.WebhookClient('985576532116381736', 'aWSppZ1JYCoL00GlUHTxzmn3uv-2SyPv0IpxtFNLZ4BxfUCaGTElqfiu1TK2r-cAYzeJ')
+const webhook1 = new Discord.WebhookClient('1006204541353594970','oSyR9WK6GuQ-3zsYhdPCEuqSbzF07mFgMKKVf_Lz0ETLuepSlpRTaUgEKCeEE1lupPPC')
 module.exports = {
   name: "report",
   description: "Reports An User",
@@ -12,6 +12,7 @@ module.exports = {
   args: true,
   usage: ["report <user>"],
   cooldown: 3,
+  permissions: [],
   aliases: [],
 
    execute: async (client, message, args, prefix, guild, color, channel) => {

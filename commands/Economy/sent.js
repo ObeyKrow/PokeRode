@@ -6,22 +6,21 @@ const Guild = require('../../models/guild.js');
 const ms = require("ms");
 
 module.exports = {
-  name: "quicktrade",
-  description: "Quick Trade your stuff to other trainers.",
+  name: "sent",
+  description: "Send Trainers Pokemon / Credits Without Trading.",
   category: "Pokemon Commands",
   args: false,
-  usage: ["quicktrade <item> <@user/userID> <amount/id>"],
+  usage: ["sent <item> <@user/userID> <amount/id>"],
   cooldown: 3,
   permissions: [],
-  aliases: ["qt"],
+  aliases: ["st"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
 
     let embed = new MessageEmbed()
       .setColor(color)
-      .addField("Quicktrading",
-        `\`\`\`${prefix}quicktrade(qt) credits(cr) <@user/userId/userName> [amount]\n`
-        + `${prefix}quicktrade(qt) redeems(r) <@user/userId/userName> [amount]\n`
-        + `${prefix}quicktrade(qt) pokemon(p) <@user/userId/userName> [p_Id p2_Id ...]\n\`\`\``
+      .addField("Sent",
+        `\`\`\`${prefix}sent(st) credits(cr) <@user/userId/userName> [amount]\n`
+                + `${prefix}sent(st) pokemon(p) <@user/userId/userName> [pokemon_Id pokemon2_Id pokemon3_id ...]\n\`\`\``
       )
     if (!args[0]) return message.channel.send(embed)
     let user = await User.findOne({ id: message.author.id });
@@ -29,13 +28,13 @@ module.exports = {
 
     // Fetching User From Message!
     let user1 = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-    if (!user1) return message.channel.send(`Provide an user to quicktrade to!`);
+    if (!user1) return message.channel.send(`Provide an user to sent to!`);
 
     // Fetching Mentioned User's DB!
     let user2 = await User.findOne({ id: user1.id });
     if (!user2) return message.channel.send(user1 + " needs to pick a starter pokémon using the \`" + prefix + "start\` command before using this command!")
 
-    if (user1.id == message.author.id) return message.channel.send(`You can't quicktrade with yourself!`)
+    if (user1.id == message.author.id) return message.channel.send(`You can't sent to yourself!`)
     let authorDB = await User.findOne({ id: message.author.id });
     if (!authorDB) return message.channel.send("You need to pick a starter pokémon using the \`" + prefix + "start\` command before using this command!");
 
@@ -55,11 +54,11 @@ module.exports = {
       r = "Redeem"
     }
     let ggift = new MessageEmbed()
-      .setAuthor(`${g} Quicktrade`)
+      .setAuthor(`${g} sent`)
       .setDescription(`${message.author} , Do you confirm to give <@${user1.id}> **${amount}** ${g}?`)
       .setColor(color);
     let rgift = new MessageEmbed()
-      .setAuthor(`${r} Quicktrade`)
+      .setAuthor(`${r} sent`)
       .setDescription(`${message.author} , Do you confirm to give <@${user1.id}> **${amount}** ${r}?`)
       .setColor(color);
     if (["cr", "bal", "credit", "credits"].includes(args[0].toLowerCase())) {
@@ -183,7 +182,7 @@ module.exports = {
           }
           await authorDB.save();
           await userDB.save();
-          return message.channel.send(`Traded!🎉`)
+          return message.channel.send(`Sented The Item!🎉`)
 
         } else if (reaction.emoji.name === "❌") {
           collector.stop("aborted");

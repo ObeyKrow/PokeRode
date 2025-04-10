@@ -12,6 +12,7 @@ module.exports = {
   args: true,
   usage: ["nickname <nickname>"],
   cooldown: 3,
+  permissions: [],
   aliases: ["nick"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
     let user = await User.findOne({ id: message.author.id });

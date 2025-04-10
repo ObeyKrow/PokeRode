@@ -6,6 +6,7 @@ module.exports = {
   category: "Start",
   description: "Start your journey",
   usage: "start",
+  permissions: [],
   aliases: ["begin"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
 

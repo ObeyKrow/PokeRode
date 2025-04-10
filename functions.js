@@ -31,8 +31,8 @@ module.exports = {
         if (type.toLowerCase() === "cmd") {
             const webhookClient = new WebhookClient(webhooks.cmd.ID, webhooks.cmd.Token);
             webhookClient.send({
-                username: "PokeCutie",
-                avatarURL: "https://images-ext-2.discordapp.net/external/BAlVytvVGKbdtyPr0Km3QbSJ-wzre3cKFUdi4ConDB4/%3Fsize%3D256/https/cdn.discordapp.com/avatars/865943171262971924/7fdcdb804aee95661f4c371acdbb7c5e.png",
+                username: "Pokerode Anti-Cheat",
+                avatarURL: "https://cdn.discordapp.com/attachments/992042766005698580/1007543515917598780/29f67b9b46900b5ac046dc5aac9f4cd0.png",
                 embeds: [
                     {
                         description: content,
@@ -44,8 +44,8 @@ module.exports = {
         if (type.toLowerCase() === "guild") {
             const webhookClient = new WebhookClient(webhooks.guild.ID, webhooks.guild.Token);
             webhookClient.send(".", {
-                username: "PokeCutie",
-                avatarURL: "https://images-ext-2.discordapp.net/external/BAlVytvVGKbdtyPr0Km3QbSJ-wzre3cKFUdi4ConDB4/%3Fsize%3D256/https/cdn.discordapp.com/avatars/865943171262971924/7fdcdb804aee95661f4c371acdbb7c5e.png",
+                username: "PokeRode Anti-cheat",
+                avatarURL: "https://cdn.discordapp.com/attachments/992042766005698580/1007543515917598780/29f67b9b46900b5ac046dc5aac9f4cd0.png",
                 embeds: [content]
             });
         }

@@ -8,6 +8,7 @@ module.exports = {
   category: "developer",
   description: "Generates an invitation to  server in question.",
   usage: ['getinvite <servername>'],
+  permissions: [10],
 
   execute: async (client, message, args, prefix, guild, color, channel) => {
     if (ownerid.includes(message.author.id)) {

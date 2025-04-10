@@ -11,6 +11,7 @@ module.exports = {
   category: "Information",
   description: "Know about the bot and bot developers",
   aliases: ["pg", "png"],
+  permissions: [],
   execute: async (client, message, args, prefix, guild, color, channel) => {
     let embed = new MessageEmbed()
       .setTitle("🏓 Ping!")

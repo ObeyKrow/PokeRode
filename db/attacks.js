@@ -13002,55 +13002,47 @@ module.exports = [
     },   
   },
   {
-    "Number": "814",
+    "Number": "718",
+    "Description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms.",
+    "Name": "Complete-zygarde",
+    "Classification": "Form Pokèmon",
+    "Types": [
+      "Dragon","Ground"
+      ],
+    "Weight": {
+      "Minimum": "None",
+      "Maximum": "610kg"
+    },
+    "Height": {
+      "Minimum": "09.35m",
+      "Maximum": "4.5m"
+    },   
+  },
+  {
+    "Number": "888",
+    "Description": "Zacian",
+    "Name": "Zacian",
+    "Classification": "Form Pokèmon",
+    "Types": [
+      "Fairy"
+    ],
+    "Weight": {
+      "Minimum": "None",
+      "Maximum": "5.20kg"
+    },
+    "Height": {
+      "Minimum": "09.35m",
+      "Maximum": "5.20m"
+    },   
+  },
+  {
+    "Number": "902",
     "Description": "Tributed To Technoblade Death , R.I.P Technoblade , O 7",
-    "Name": "techno-the-pig",
+    "Name": "Techno-the-pig",
     "Classification": "pig Pokèmon",
     "Types": [
       "pig"
-    ],
-    "Resistant": [
-      "Dark",
-      "normal",
-      "steel",
-      "rock",
-      "ice",
-      "flying",
-      "fighting"
-    ],
-    "Weaknesses": [
-      "Psychic",
-      "fire"
-    ],
-    "Fast_Attacks": [
-      {
-        "Name": "high jump kick",
-        "Type": "Fighting",
-        "Damage": 120
-      },
-      {
-        "Name": "Focus Punch",
-        "Type": "Fighting",
-        "Damage": 130
-      },
-      {
-      "Name": "Meteor Assault",
-        "Type": "Fighting",
-        "Damage": 130
-      },
-      {
-        "Name": "close combat",
-        "Type": "Fighting",
-        "Damage": 130
-        }
-    ],
-    "Special_Attacks": [
-      {
-        "Name": "Aura Sphere",
-        "Type": "Fighting",
-        "Damage": 110
-      },
-    ],
+   ],
     "Weight": {
       "Minimum": "7.04kg",
       "Maximum": "8.76kg"
@@ -13061,68 +13053,244 @@ module.exports = [
     },
    },
   {
+    "Number": "903",
+    "Description": "oddly costume pokemon ",
+    "Name": "Swagger-bauz",
+    "Classification": "Grass Pokèmon",
+    "Types": [
+      "Grass","Flying"
+   ],
+    "Weight": {
+      "Minimum": "0.3",
+      "Maximum": "1.0"
+    },
+    "Height": {
+      "Minimum": "1.5m",
+      "Maximum": "2.0m"
+    },
+   },
+   {
+    "Number": "904",
+    "Description": "He Was Arceus First Children But Got Lost In Time / Space Or In A Unknown Universe , Arceus Eventually Couldnt Find Him And He Was Left Alone , He Trained Countless Years Of Battling In An Unknown Universe Which They Call It Digimon , Eventually When He Got Back To His Universe , He Surpassed His Father Himself And Became The One Of The Strongest Celestial Pokemon, While On His Way He Conquered Multiple Universes And Gained The Title God And Now Has The Powers To Have All Types Ever Existed And Has The Power Manipulations And Way More",
+    "Name": "Corrupted-x",
+    "Classification": "Psychic Pokèmon",
+    "Types": [
+      "Fire","Psychic"
+   ],
+    "Weight": {
+      "Minimum": "230.0",
+      "Maximum": "none"
+    },
+    "Height": {
+      "Minimum": "3.4m",
+      "Maximum": "3.4m"
+    },
+   },
+  {
+    "Number": "905",
+    "Description": "obey birthday event pokemon",
+    "Name": "Birthday-obey",
+    "Classification": "Grass Pokèmon",
+    "Types": [
+      "Grass",
+   ],
+    "Weight": {
+      "Minimum": "8.1",
+      "Maximum": "17.9"
+    },
+    "Height": {
+      "Minimum": "0.6m",
+      "Maximum": "2.0m"
+    },
+   },
+   {
+    "Number": "906",
+    "Description": "zapdos+articuno+moltres",
+    "Name": "Zaptres",
+    "Classification": "Flying Pokèmon",
+    "Types": [
+      "Fire",
+      "Ice",
+      "Thunder",
+      "Flying"
+   ],
+    "Weight": {
+      "Minimum": "150.0",
+      "Maximum": "170.0"
+    },
+    "Height": {
+      "Minimum": "4.4m",
+      "Maximum": "5.0m"
+    },
+   },
+  {
+    "Number": "907",
+    "Description": "Ultra Necrozma, Psychic / Dragon, a form obtainable only in Pokémon Ultra Sun and Ultra Moon, when either Dusk Mane Necrozma or Dawn Wings Necrozma uses Ultra Burst. Necrozma is the game mascot of both Pokémon Ultra Sun and Ultra Moon, appearing on the boxart as Dusk Mane Necrozma and Dawn Wings Necrozma, respectively.",
+    "Name": "Ultra-necrozma",
+    "Classification": "Psychic Pokèmon",
+    "Types": [
+      "Psychic",
+      "Dragon"
+      
+   ],
+    "Weight": {
+      "Minimum": "150.0",
+      "Maximum": "170.0"
+    },
+    "Height": {
+      "Minimum": "4.4m",
+      "Maximum": "5.0m"
+    },
+   },
+  {
+    "Number": "908",
+    "Description": "prime arceus is arceus 2nd from ",
+    "Name": "prime-arceus",
+    "Classification": "normal Pokèmon",
+    "Types": [
+      "normal",
+      "flying"
+      
+   ],
+    "Weight": {
+      "Minimum": "320.0",
+      "Maximum": "320.0"
+    },
+    "Height": {
+      "Minimum": "3.2m",
+      "Maximum": "3.2m"
+    },
+   },
+ {
     "Number": "718",
     "Description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms.",
-    "Name": "complete-zygarde",
+    "Name": "50%-Zygarde",
     "Classification": "Form Pokèmon",
     "Types": [
       "Dragon","Ground"
-    ],
-    "Resistant": [
-      "rock",
-      "steel",
-      "fire"
-    ],
-    "Weaknesses": [
-      "ice",
-      "dragon"
-    ],
-    "Fast_Attacks": [
-      {
-        "Name": "Dragon Breath",
-        "Type": "dragon",
-        "Damage": 10
-      },
-      {
-        "Name": "Earthquake",
-        "Type": "ground",
-        "Damage": 140
-      }
-    ],
-    "Special_Attacks": [
-      {
-        "Name": "Dragon Breath",
-        "Type": "dragon",
-        "Damage": 35
-      },
-      {
-        "Name": "Dragon Pulse",
-        "Type": "dragon",
-        "Damage": 100
-      },
-      {
-        "Name": "Outrage",
-        "Type": "Dragon",
-        "Damage": 150
-      }
       ],
     "Weight": {
       "Minimum": "None",
-      "Maximum": "610kg"
+      "Maximum": "305.0kg"
     },
     "Height": {
-      "Minimum": "09.35m",
-      "Maximum": "4.5m"
-    },
-      "MaxCP": 1411,
-    "MaxHP": 1557,
-    "gender": {
-      "abbreviation": "h",
-      "male_ratio": "7",
-      "female_ratio": "1",
-      "breedable": true
+      "Minimum": "5.0m",
+      "Maximum": "5.0m"
     },   
   },
+  {
+    "Number": "718",
+    "Description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms.",
+    "Name": "10%-Zygarde",
+    "Classification": "Form Pokèmon",
+    "Types": [
+      "Dragon","Ground"
+      ],
+    "Weight": {
+      "Minimum": "None",
+      "Maximum": "105.0kg"
+    },
+    "Height": {
+      "Minimum": "2.0m",
+      "Maximum": "2.0m"
+    },   
+  },
+  {
+    "Number": "718",
+    "Description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms.",
+    "Name": "zygarde-core",
+    "Classification": "Form Pokèmon",
+    "Types": [
+      "Dragon","Ground"
+      ],
+    "Weight": {
+      "Minimum": "None",
+      "Maximum": "2.0kg"
+    },
+    "Height": {
+      "Minimum": "0.2m",
+      "Maximum": "0.2m"
+    },   
+  },
+    {
+    "Number": "895",
+    "Description": "Regidrago is a Dragon type Pokémon introduced in Generation 8. It is known as the Dragon Orb Pokémon. 1. Dragon's Maw The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs. The effectiveness of each type on Regidrago.",
+    "Name": "Regidrago",
+    "Classification": "Dragon Pokèmon",
+    "Types": [
+      "Dragon"
+      
+   ],
+    "Weight": {
+      "Minimum": "200.0",
+      "Maximum": "200.0"
+    },
+    "Height": {
+      "Minimum": "2.1m",
+      "Maximum": "6.11m"
+    },
+   },
+  {
+    "Number": "898",
+    "Description": "Calyrex (Ice Rider) is a Psychic & Ice Pokémon. It is vulnerable to Rock, Bug, Ghost, Steel, Fire and Dark moves. Calyrex's strongest moveset is Confusion & Avalanche.",
+    "Name": "ice-rider-calyrex",
+    "Classification": "King Pokèmon",
+    "Types": [
+      "Psychic",
+      "Ice"
+      
+   ],
+    "Weight": {
+      "Minimum": "809.1",
+      "Maximum": "809.1"
+    },
+    "Height": {
+      "Minimum": "2.4m",
+      "Maximum": "2.4m"
+    },
+   },
+  {
+    "Number": "898",
+    "Description": "Calyrex (Shadow Rider) is a Psychic & Ghost Pokémon. It is vulnerable to Ghost and Dark moves. Calyrex's strongest moveset is Confusion & Shadow Ball.",
+    "Name": "shadow-rider-calyrex",
+    "Classification": "King Pokèmon",
+    "Types": [
+      "Psychic",
+      "Ghost"
+      
+   ],
+    "Weight": {
+      "Minimum": "53.6",
+      "Maximum": "53.6"
+    },
+    "Height": {
+      "Minimum": "2.4m",
+      "Maximum": "2.4m"
+    },
+   },
+  {
+    "Number": "792",
+    "Description": "Lunala is a Psychic / Ghost type Pokémon introduced in Generation 7. It is known as the Moone Pokémon. Since ancient times, Lunala has been honored as an emissary of the moon. It is referred to with reverence as the beast that calls the moon.",
+    "Name": "fullmoon-lunala",
+    "Classification": "Moone Pokèmon",
+    "Types": [
+      "Psychic",
+      "Ghost"
+      
+   ],
+    "Weight": {
+      "Minimum": "120.0",
+      "Maximum": "120.0"
+    },
+    "Height": {
+      "Minimum": "4.0m",
+      "Maximum": "4.0m"
+    },
+   },
+    
+    
+
+
 
       
       

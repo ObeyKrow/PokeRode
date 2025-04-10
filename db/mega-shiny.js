@@ -192,8 +192,4 @@ module.exports = [
     name: "diancie",
     url: "https://imgur.com/uV3S9JS.png"
   },
-  {
-    name: "complete zygarde",
-    url: "https://media.discordapp.net/attachments/992042766005698580/992660599743975496/d5c6346965620ae7b77478b2a9355ca7e2dbb9c0a3360009e4d7062295aa7d19.0.PNG"
-  }
 ]

@@ -2968,9 +2968,9 @@ module.exports = [
     _nb: 717, _engName: "Yveltal", _frName: "Yveltal", _type: "Dark", _type2: "Flying", _expGiven: 3, _catchRate: 45, _male: 2,
     _baseStats: { _total: 680, _hp: 126, _atk: 131, _def: 95, _sAtk: 131, _sDef: 98, _spd: 99 }
   },
-  {
+   {
     _nb: 718, _engName: "Zygarde", _frName: "Zygarde", _type: "Dragon", _type2: "Ground", _expGiven: 3, _catchRate: 3, _male: 2,
-    _baseStats: { _total: 600, _hp: 108, _atk: 100, _def: 121, _sAtk: 81, _sDef: 95, _spd: 95 }
+    _baseStats: { _total: 600, _hp: 218, _atk: 100, _def: 121, _sAtk: 91, _sDef: 95, _spd: 95 }
   },
   {
     _nb: 719, _engName: "Diancie", _frName: "Diancie", _type: "Rock", _type2: "Fairy", _expGiven: 3, _catchRate: 3, _male: 2,
@@ -2986,6 +2986,21 @@ module.exports = [
     _nb: 721, _engName: "Volcanion", _frName: "Volcanion", _type: "Fire", _type2: "Water", _expGiven: 3, _catchRate: 3, _male: 2,
     _baseStats: { _total: 600, _hp: 80, _atk: 110, _def: 120, _sAtk: 130, _sDef: 90, _spd: 70 }
   },
+  {
+    _nb: 718, _engName: "Complete Zygarde", _frName: "Complete Zygarde", _type: "Dragon", _type2: "Ground", _expGiven: 3, _catchRate: 3, _male: 2,
+    _baseStats: { _total: 718, _hp: 216, _atk: 100, _def: 121, _sAtk: 91, _sDef: 95, _spd: 95 }
+  },
+  {
+     name: "techno-the-pig",
+     type: "Pig",
+     url: "https://media.discordapp.net/attachments/992042766005698580/992418330818384043/1656681157296.png",
+     hp: 100,
+     atk: 750,
+     def: 300,
+     spatk: 450,
+     spdef: 200,
+     speed: 200
+   },
   {
     name: "zacian",
     type: "Fairy",
@@ -3155,11 +3170,11 @@ module.exports = [
     type: "Electric",
     url: "https://imgur.com/9ihPmp6.png",
     hp: 80,
-    atk: 50,
-    def: 100,
-    spatk: 200,
-    spdef: 100,
-    speed: 50
+    atk: 100,
+    def: 50,
+    spatk: 100,
+    spdef: 50,
+    speed: 200
   }, {
     name: "original-magearna",
     type: "Steel | Fairy",
@@ -3229,7 +3244,7 @@ module.exports = [
   {
      name: "chariken",
      type: "Fire | Fighting",
-     url: "https://cdn.discordapp.com/attachments/973589548548382750/981521485900423238/1654083349207.png",
+     url: "https://imgur.com/RNOAHIJ.png",
      hp: 150,
      atk: 200,
      def: 60,
@@ -3238,8 +3253,75 @@ module.exports = [
      speed: 200
    },
    {
-    _nb: 815, _engName: "solunala", _frName: "solunala", _type: "Fire", _type2: "psychic", _expGiven: 100, _catchRate: 50, _male: 2,
+    _nb: 815, _engName: "Solunala", _frName: "Solunala", _type: "Fire", _type2: "psychic", _expGiven: 100, _catchRate: 50, _male: 2,
     _baseStats: { _total: 600, _hp: 80, _atk: 110, _def: 120, _sAtk: 130, _sDef: 90, _spd: 70 }
   },
+  {
+    name: "swagger-bauz",
+    type: "Grass | Flying",
+    url: "https://imgur.com/9UAOxNv.png",
+    hp: 68,
+    atk: 55,
+    def: 55,
+    spatk: 50,
+    spdef: 50,
+    speed: 42
+  },
+  {
+    name: "corrupted-x",
+    type: "Fire | psychic",
+    url: "https://imgur.com/zsOUNKM.png",
+    hp: 1254,
+    atk: 4975,
+    def: 5450,    
+    spatk: 1989,
+    spdef: 3921,
+    speed: 8008
+  },
+  {
+    name: "prime-arceus",
+    type: "Normal | Flying",
+    url: "https://cdn.discordapp.com/attachments/986850465423720472/988029401503502386/d8y6e9g-d52d390e-523d-4d65-92e8-2bb71047c88a.png",
+    hp: 1276,
+    atk: 4383,
+    def: 3355,
+    spatk: 1127,
+    spdef: 7771,
+    speed: 9111
+  },
+  {
+    name: "ultra-necrozma",
+    type: "Psychic | Dragon",
+    url: "https://imgur.com/DC8YsdG.png",
+    hp: 97,
+    atk: 167,
+    def: 97,
+    spatk: 167,
+    spdef: 97,
+    speed: 129
+  },
+   {
+    name: "ice-rider-calyrex",
+    type: "Psychic | Ice",
+    url: "https://imgur.com/pb54cRu.png",
+    hp: 100,
+    atk: 165,
+    def: 150,
+    spatk: 85,
+    spdef: 130,
+    speed: 50
+  },
+
+
   
+
+  
+ 
+ 
+
+  
+  
+  
+ 
+   
 ];

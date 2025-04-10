@@ -36,7 +36,12 @@ module.exports = {
     if (user.upvotes == 5) upvotes = `${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.no} ${config.no}`;
     if (user.upvotes == 6) upvotes = `${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.no}`;
     if (user.upvotes > 6) upvotes = `${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes} ${config.yes}`;
-    streak = upvotes + `\n\n**Your Rewards**\n> <:box_bronze:887354147811229717> Bronze Crate: ${user.bronzecrate}\n> <:box_silver:887354147203088475> Silver Crate: ${user.silvercrate}\n> <:box_golden:887354146561355777> Golden Crate: ${user.goldencrate}\n> <:box_diamond:887354143809888317> Diamond Crate: ${user.diamondcrate}\n> <:box_deluxe:887354137593909308> Deluxe Crate: ${user.deluxecrate}`
+    streak = upvotes + `\n\n**Your Rewards**\n
+<:box_normal:974705704021672007> Bronze Crate: ${user.bronzecrate}
+<:box_golden:974705704021672007> Silver Crate: ${user.silvercrate}
+<:box_diamond:974705704021672007> Golden Crate: ${user.goldencrate}
+<:box_master:974705704021672007> Diamond Crate: ${user.diamondcrate}
+<:box_deluxe:974705704021672007> Deluxe Crate: ${user.deluxecrate}`
 
 
 
@@ -45,7 +50,7 @@ module.exports = {
     const Embed = new Discord.MessageEmbed()
       .setTitle(`Voting Rewards`)
       .setColor(color)
-      .setDescription(`**[Vote for the bot every 12 hours to gain rewards!](https://top.gg/bot/${client.user.id}/vote)** Voting for the bot multiple days in a row will increase your streak and give you a chance at better rewards!\n\n[Vote Now](https://top.gg/bot/${client.user.id}/vote)`)
+      .setDescription(`**[Vote for the bot every 12 hours to gain rewards!](https://top.gg/servers/986850465423720469/vote)** Voting for the bot multiple days in a row will increase your streak and give you a chance at better rewards!\n\n[Vote Now](https://top.gg/servers/986850465423720469/vote)`)
       .addField(`Current Voting Streak: ${user.upvotes}`, streak)
       .setFooter("Once you have voted, you will get dm from the bot & Rewards will automatically redeemed to your account.")
     

@@ -16,9 +16,9 @@ module.exports = [
     url: "https://imgur.com/cGEaGi4.png"
   },
   {
-    name: "ash's greninja",
+    name: "ash's-greninja",
     url:
-"https://cdn.discordapp.com/attachments/990646205845495808/992038002744377354/10117_1.png"
+"https://imgur.com/tMwQhL7.png"
   },
   {
     name: "sunglasses squirtle",
@@ -3705,24 +3705,97 @@ module.exports = [
     url: "https://imgur.com/5HQcByo.png"
   },
   {
-    name: "50%-zygarde", 
-    url: "https://imgur.com/a/7bSb4dp"
-  },
-  {
-    name: "complete-zygarde",
-    url: "https://imgur.com/KcxTN2z",
-    hp: 216,
-    atk: 100,
-    def: 121,
-    spatk: 91,
-    spdef: 95,
-    speed: 95
-  },
-  {
     name: "complete-zygarde", 
-    url: "https://imgur.com/KcxTN2z"
+    url: "https://imgur.com/KcxTN2z.png"
   },
-
+  {
+    name: "zacian", 
+    url: "https://imgur.com/WGtgwor.png"
+  },
+  {
+    name: "corrupted-x", 
+    url: "https://imgur.com/urSTI28.png"
+  },
+  {
+    name: "birthday-obey", 
+    url: "https://imgur.com/6z5Ssj7.png"
+  },
+  {
+    name: "ultra-necrozma",
+    url: "https://imgur.com/1Rdpbqf.png"
+  },
+ {
+    name: "summer-magikarp",
+    url: "https://cdn.discordapp.com/attachments/994237638158594069/997530250571423765/Pokemon2.png"
+  },
+ {
+    name: "chariken",
+    url: "https://imgur.com/RNOAHIJ.png"
+  },
+  {
+    name: "50%-zygarde",
+    url: "https://imgur.com/Lr5yCcO.png"
+  },
+  {
+    name: "10%-zygarde",
+    url: "https://imgur.com/QfUbfDb.png"
+  },
+  {
+    name: "core-zygarde",
+    url: "https://imgur.com/HG4XgJF.png"
+  },
+  {
+    name: "black-kyurem",
+    url: "https://imgur.com/AhIt2QL.png"
+  },
+  {
+    name: "white-kyurem",
+    url: "https://imgur.com/nC2OGoy.png"
+  },
+   {
+    name: "regieleki",
+    url: "https://imgur.com/wwDHKUA.png"
+  },
+  {
+    name: "regidrago",
+    url: "https://imgur.com/l39SGCE.png"
+  },
+  {
+    name: "calyrex",
+    url: "https://imgur.com/COih0eU.png"
+  },
+  {
+    name: "spectrier",
+    url: "https://imgur.com/374hXVW.png"
+  },
+  {
+    name: "glastrier",
+    url: "https://imgur.com/Uknuon3.png"
+  },
+{
+    name: "fire-ancient-oddish",
+    url: "https://cdn.discordapp.com/attachments/986850465423720472/1002966148163322058/Untitled338_20220729100437.png"
+  },
+{
+    name: "diamond-carbink",
+    url: "https://cdn.discordapp.com/attachments/992042766005698580/1008635966703022101/Untitled382_20220814145512.png"
+  },
+{
+    name: "future-slowpoke",
+    url: "https://cdn.discordapp.com/attachments/992042766005698580/1008593267673280612/Untitled388_20220815111051.png"
+  },
+  {
+    name: "ufo-magnezone",
+    url: "https://cdn.discordapp.com/attachments/992042766005698580/1008045295294230598/Untitled160_20220813231124.png"
+  },
+  {
+    name: "shadow-rider-calyrex",
+    url: "https://imgur.com/OICe8Ib.png"
+  },
+  {
+    name: "fullmoon-lunala",
+    url: "https://imgur.com/caZvARU.png"
+  },
 
 
 ]

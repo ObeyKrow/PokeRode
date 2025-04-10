@@ -13,6 +13,7 @@ module.exports = {
     args: false,
     usage: ["invite"],
     cooldown: 3,
+    permissions: [],
     aliases: [""],
     execute: async (client, message, args, prefix, guild, color, channel) => {
 

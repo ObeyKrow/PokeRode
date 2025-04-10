@@ -182,7 +182,7 @@ module.exports = [
   {
     name: "complete-zygarde",
     type: "Dragon |Ground",
-    url: "https://cdn.discordapp.com/attachments/992042766005698580/992833696275124334/R.jpg",
+    url: "https://imgur.com/AcDRLF1.png",
     hp: 216,
     atk: 100,
     def: 121,

@@ -15709,15 +15709,15 @@ module.exports = [
       "Ground"
     ],
     "base": {
-      "hp": 108,
-      "attack": 100,
-      "defense": 121,
-      "spatk": 81,
-      "spdef": 95,
-      "speed": 95
+    "hp": 108,
+    "atk": 100,
+    "def": 121,    
+    "spatk": 81,
+    "spdef": 95,
+    "speed": 95
     },
-    "description": "Hi",
-    url:""
+  "description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms",
+    "url":"https://images-ext-1.discordapp.net/external/H8jGqIJ57NNB87tUj9VXLcpn84G_58gUbubS3FF1qrM/%3Fv%3D26/https/assets.poketwo.net/images/718.png"
   },
   {
     "id": 719,
@@ -17646,7 +17646,7 @@ module.exports = [
      "spdef": 40,
      "speed": 71
     },
-    "url": "https://cdn.discordapp.com/attachments/980786172664107029/981519027895681044/Pokemon.png"
+    "url": "https://imgur.com/RNOAHIJ.png"
   },
 
   {
@@ -17673,7 +17673,7 @@ module.exports = [
  {
     "id": 813,
     "name": {
-      "english": "sandycario",
+      "english": "anubis-lucario",
       "japanese": "",
       "chinese": "",
       "french": ""
@@ -17692,49 +17692,182 @@ module.exports = [
     "url": "https://cdn.discordapp.com/attachments/973589548548382750/981542484939272202/1654088347558.png"
   },
    {
-    "id": 718,
+    "id": 888,
     "name": {
-      "english": "complete-Zygarde",
-      "japanese": "ジガルデ",
-      "chinese": "基格尔德",
-      "french": "complete-Zygarde"
+      "english": "Zacian",
+      "japanese": "Zacian",
+      "chinese": "Zacian",
+      "french": ""
     },
     "type": [
-      "Ground", 
+      "Fairy"
+    ],
+    "base": {
+ "hp": 92,
+     "atk": 130,
+     "def": 115,
+     "spatk": 80,
+     "spdef": 115,
+     "speed": 138
+    },
+    "url": "https://imgur.com/qJuRWlY.png"
+  },
+   {
+    "id": 903,
+    "name": {
+      "english": "swagger-bauz",
+      "japanese": "swagger-bauz",
+      "chinese": "swagger-bauz",
+      "french": "swagger-bauz"
+    },
+    "type": [
+      "Grass | Flying"
+    ],
+    "base": {
+ "hp": 68,
+     "atk": 55,
+     "def": 55,
+     "spatk": 50,
+     "spdef": 50,
+     "speed": 42
+    },
+    "url": "https://imgur.com/9UAOxNv.png"
+  },
+  {
+    "id": 904,
+    "name": {
+      "english": "Corrupted-x",
+      "japanese": "Corrupted-x",
+      "chinese": "Corrupted-x",
+      "french": ""
+    },
+    "type": [
+      "psychic","Fire"
+    ],
+    "base": {
+ "hp": 130,
+     "atk": 170,
+     "def": 100,
+     "spatk": 100,
+     "spdef": 50,
+     "speed": 150
+    },
+    "url": "https://imgur.com/mPCnmnL.png"
+  },
+  {
+    "id": 907,
+    "name": {
+      "english": "Ultra Necrozma",
+      "japanese": "ウルトラネクロズマ",
+      "chinese": "Ultra Necrozma",
+      "french": "Ultra Necrozma"
+    },
+    "type": [
+      "Psychic",
+      "Steel"
+    ],
+    "base": {
+      "hp": 97,
+      "attack": 167,
+      "defense": 97,
+      "spatk": 167,
+      "spdef": 97,
+      "speed": 129
+    }
+  },
+  {
+    "id": 907,
+    "name": {
+      "english": "ultra necrozma",
+      "japanese": "ultra necrozma",
+      "chinese": "ultra necrozma",
+      "french": "ultra necrozma"
+    },
+    "type": [
+      "Psychic",
       "Dragon"
     ],
     "base": {
-     "hp": 108,
-     "atk": 100,
-     "def": 121,
-     "spatk": 91,
-     "spdef": 95,
-     "speed": 95
+      "hp": 97,
+      "attack": 167,
+      "defense": 97,
+      "spatk": 167,
+      "spdef": 97,
+      "speed": 129
     },
-    "url":"https://imgur.com/undefined",
-    "description": "Zygarde is a Dragon / Ground type Pokémon introduced in Generation 6. It is known as the Order Pokémon. Zygarde is a snake-like legendary Pokémon. Its ability Aura Break counters the effects of the abilities of Xerneas and Yveltal. It was later revealed that Zygarde as seen in Pokémon X & Y is in fact an alternate Forms."
+    "description" : "Ultra Necrozma, Psychic / Dragon, a form obtainable only in Pokémon Ultra Sun and Ultra Moon, when either Dusk Mane Necrozma or Dawn Wings Necrozma uses Ultra Burst. Necrozma is the game mascot of both Pokémon Ultra Sun and Ultra Moon, appearing on the boxart as Dusk Mane Necrozma and Dawn Wings Necrozma, respectively.",
+    "url" : "https://imgur.com/DC8YsdG.png"
   },
   {
-    "id": 814,
+    "id": 895,
     "name": {
-      "english": "techno-the-pig",
-      "japanese": "豚のテクノ",
-      "chinese": "技术猪",
-      "french": "techno le cochon"
+      "english": "regidrago",
+      "japanese": "Regidrago",
+      "chinese": "Regidrago",
+      "french": "Regidrago"
     },
     "type": [
-      "pig"
+      "Dragon"
     ],
     "base": {
- "hp":100 ,
-     "atk": 800,
-     "def": 280,
-     "spatk": 500,
-     "spdef": 180,
-     "speed": 230
+      "hp": 200,
+      "attack": 100,
+      "defense": 50,
+      "spatk": 100,
+      "spdef": 50,
+      "speed": 80
     },
-    "url": "https://media.discordapp.net/attachments/992042766005698580/992449438549282876/Pokemon.png"
+    "description" : "Regidrago is a Dragon type Pokémon introduced in Generation 8. It is known as the Dragon Orb Pokémon. 1. Dragon's Maw The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs. The effectiveness of each type on Regidrago.",
+    "url" : "https://imgur.com/TVAxXXQ.png"
   },
+   {
+    "id": 898,
+    "name": {
+      "english": "Ice Rider Calyrex",
+      "japanese": "Ice Rider Calyrex",
+      "chinese": "Ice Rider Calyrex",
+      "french": "Ice Rider Calyrex"
+    },
+    "type": [
+      "Psychic",
+      "Ice"
+    ],
+    "base": {
+      "hp": 100,
+      "attack": 165,
+      "defense": 150,
+      "spatk": 85,
+      "spdef": 130,
+      "speed": 50
+    },
+    "url": "https://imgur.com/pb54cRu.png",
+  },
+  {
+    "id": 898,
+    "name": {
+      "english": "Shadow Rider Calyrex",
+      "japanese": "Shadow Rider Calyrex",
+      "chinese": "Shadow Rider Calyrex",
+      "french": "Shadow Rider Calyrex"
+    },
+    "type": [
+      "Psychic",
+      "Ghost"
+    ],
+    "base": {
+      "hp": 100,
+      "attack": 85,
+      "defense": 80,
+      "spatk": 165,
+      "spdef": 100,
+      "speed": 150
+    },
+    "url": "https://imgur.com/OM5crma.png",
+  },
+
+  
+ 
+
 
   
 ]

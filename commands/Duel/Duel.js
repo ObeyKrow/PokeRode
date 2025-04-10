@@ -91,7 +91,7 @@ module.exports = {
 
               const canvas = Canvas.createCanvas(700, 350);
                 const ctx = canvas.getContext('2d');
-                const background = await Canvas.loadImage(`https://imgur.com/a/KNbXTvb`);
+                const background = await Canvas.loadImage(`https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d881rst-67b0388f-4616-4464-a57c-5ea720f36b36.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJmYjI4MjFhLTE0MDYtNGExZC05YjA0LTY2NjhmMjc4ZTk0NFwvZDg4MXJzdC02N2IwMzg4Zi00NjE2LTQ0NjQtYTU3Yy01ZWE3MjBmMzZiMzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.B_VOXbejHTXl83h-cO2q2l_FDRzi4veWzrXANL6bMx4`);
                 ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
                 ctx.strokeStyle = '#74037b';
@@ -109,7 +109,7 @@ module.exports = {
                 let hp2 = /* remainingHPofauthor */ hp;
                 let hp3 = /* totalHPofaccepter */ hp1;
                 embed
-                    .setTitle (`Duel Ground`)
+                    .setTitle (`Battle of a Life Time`)
                     .setDescription(`${message.author.username}'s ${user.pokemons[selected].name.replace(/-+/g, " ").capitalize()}: ${hp}/${hp2}HP\n${user1.user.username}'s ${user2.pokemons[selected1].name.replace(/-+/g, " ").capitalize()}: ${hp1}/${hp3}HP`)
                     .attachFiles([{ name: "Battle.png", attachment: canvas.toBuffer() }])
                     .setImage("attachment://" + "Battle.png")

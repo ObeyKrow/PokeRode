@@ -28,17 +28,18 @@ const ms = require("ms");
 
 module.exports = {
   name: "pokemon",
-  description: "Display a list of the pokemon you own.",
+  description: "Display a list of your pokemon.",
   category: "Pokemon Commands",
   args: false,
-  usage: ["p!pokemon"],
+  options: [""],
   cooldown: 3,
-  aliases: ["pk", "p"],
+  permissions: [],
+  aliases: ["pc","pk","p"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
-    if (message.content.toLowerCase().startsWith((`${prefix.toLowerCase()}pk add` || `${prefix.toLowerCase()}pk remove`))) return;
-
-    let user = await User.findOne({ id: message.author.id });
-    if (!user) return message.channel.send("> <:x_mark:868344397211787275> **You need to pick a starter pokémon using the \`" + prefix + "start\` command before using this command!**");
+    if(message.content.toLowerCase().startsWith((`${prefix.toLowerCase()}p add` || `${prefix.toLowerCase()}p remove`))) return;
+		
+		let user = await User.findOne({ id: message.author.id });
+    if (!user) return message.channel.send("You need to pick a starter pokémon using the \`" + prefix + "start\` command before using this command!");
 
 
     let e = message,
@@ -50,139 +51,142 @@ module.exports = {
       if (x && (x = x.split(" "))) zbc[x.splice(0, 1)] = x.join(" ").replace(/\s$/, '') || true;
     })
 
-    if (zbc["legendary"] || zbc["legend"] || zbc["l"]) {
-      s = s.filter(e => legends.includes(capitalize(e.name.replace(/-+/g, " "))) || legends2.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["mythical"] || zbc["myth"] || zbc["m"]) {
-      s = s.filter(e => mythics.includes(capitalize(e.name.replace(/-+/g, " "))) || mythics.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["ultrabeast"] || zbc["ub"]) {
-      s = s.filter(e => ub.includes(capitalize(e.name.replace(/-+/g, " "))) || ub.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["starter"] || zbc["starters"]) {
-      s = s.filter(e => starters.includes(capitalize(e.name.replace(/-+/g, " "))) || starters.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-     if (zbc["alolan"] || zbc["a"]) {
-      s = s.filter(e => alolans.includes(capitalize(e.name.replace(/-+/g, " "))) || alolans.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-     if (zbc["galarian"] || zbc["g"]) {
-      s = s.filter(e => galarians.includes(capitalize(e.name.replace(/-+/g, " "))) || galarians.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["gmax"] || zbc["gigantamax"]) {
-      s = s.filter(e => gmax.includes(capitalize(e.name.replace(/-+/g, " "))) || gmax.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["shadow"] || zbc["shad"]) {
-      s = s.filter(e => shadow.includes(capitalize(e.name.replace(/-+/g, " "))) || shadow.includes(capitalize(e.name.replace(/-+/g, " "))))
-    }
-    if (zbc["shiny"] || zbc["s"]) s = s.filter(e => {
-       if (e.shiny) return e;
-     });
-     if (zbc["mega"]) s = s.filter(e => {
-       if ((e.name.toLowerCase().replace(/ +/g, "-")).startsWith("mega-")) return e;
-     });
-    if (zbc["name"] || zbc["n"]) s = s.filter(e => {
+    if (zbc["legendary"] || zbc["legend"]|| zbc["l"]) s = s.filter(e => {
+      //if (e.name.toLowerCase().startsWith('primal')) return e;
+      //console.log(legends2, e.name.capitalize().replace(/-+/g, " "))
+      if (legends.includes(e.name.capitalize().replace(/-+/g, " ")) || legends2.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    });
+    if (zbc["mythical"] || zbc["mythic"]||zbc["m"]) s = s.filter(e => {
+      if (mythics.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    });
+    if (zbc["starter"] || zbc["starters"]) s = s.filter(e => {
+      if (starters.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    });
+    if (zbc["ultrabeast"] || zbc["ub"]) s = s.filter(e => {
+      if (ub.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    });
+    if (zbc["mega"]) s = s.filter(e => {
+      if ((e.name.toLowerCase().replace(/ +/g, "-")).startsWith("mega-")) return e;
+    });
+    if (zbc["alolan"]||zbc["a"]) s = s.filter(e => {
+      if (alolans.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    });
+    if (zbc["galarian"]||zbc["g"]) s = s.filter(e => {
+      if (galarians.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    })
+    if (zbc["gmax"]||zbc["gigantamax"]) s = s.filter(e => {
+      if (gmax.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    })
+    if (zbc["shad"]||zbc["shadow"]) s = s.filter(e => {
+      if (shadow.includes(e.name.capitalize().replace(/-+/g, " "))) return e;
+    })
+    if (zbc["shiny"]||zbc["sh"]) s = s.filter(e => {
+      if (e.shiny) return e;
+    });
+    if (zbc["name"]||zbc["n"]) s = s.filter(e => {
       if (e && (zbc['name']) == e.name.toLowerCase().replace(/-+/g, ' ')) return e;
-     });
-     if (zbc["nick"] || zbc["nickname"]) s = s.filter(e => {
-       if (e.nick && (zbc['nick'] || zbc["nickname"]) == e.nick.toLowerCase().replace(/-+/g, ' ')) return e;
-     });
- 
-
+    });
     
-    // if (zbc['type']) s = s.filter(e => {
-    //   if (e.rarity.match(new RegExp((zbc['type']), "gmi")) != null) return e;
-    // });
-    // if (zbc['level']) s = s.filter(e => {
-    //   let a = zbc["level"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.level > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.level < a[1]) return e;
-    //   });
-
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.level == a[1]) return e;
-    //   });
-    // })
-    // if (zbc["hpiv"]) {
-    //   let a = zbc["hpiv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.hp > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.hp < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.hp == a[1]) return e;
-    //   });
-    // }
-    // if (zbc["atkiv"]) {
-    //   let a = zbc["atkiv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.atk > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.atk < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.atk == a[1]) return e;
-    //   });
-    // }
-    // if (zbc["defiv"]) {
-    //   let a = zbc["defiv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.def > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.def < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.def == a[1]) return e;
-    //   });
-    // }
-    // if (zbc["spatkiv"]) {
-    //   let a = zbc["spatkiv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.spatk > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.spatk < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.spatk == a[1]) return e;
-    //   });
-    // }
-    // if (zbc["spdefiv"]) {
-    //   let a = zbc["spdefiv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.spdef > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.spdef < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.spdef == a[1]) return e;
-    //   });
-    // }
-    // if (zbc["speediv"]) {
-    //   let a = zbc["speediv"].split(" ")
-    //   if (a[0] === ">") s = s.filter(e => {
-    //     if (e.speed > a[1]) return e;
-    //   });
-    //   if (a[0] === "<") s = s.filter(e => {
-    //     if (e.speed < a[1]) return e;
-    //   });
-    //   if (Number(a[0])) s = s.filter(e => {
-    //     if (e.speed == a[1]) return e;
-    //   });
-    // }
-    // if (a[0] === "orderiv") {
-    //   user.orderIV = true;
-    // }
-    // if (a[0] === "orderalphabet") {
-    //   user.orderAlphabet = true;
-    // }
+    if (zbc["nick"] || zbc["nickname"]) s = s.filter(e => {
+      if (e.nick && (zbc['nick'] || zbc["nickname"]) == e.nick.toLowerCase().replace(/-+/g, ' ')) return e;
+    });
+    if (zbc["fav"] || zbc["favourite"]) s = s.filter(e => {
+        if (e.fav) return e;
+      });
+    if (zbc['type']) s = s.filter(e => {
+      if (e.rarity.match(new RegExp((zbc['type']), "gmi")) != null) return e;
+    });
+    if (zbc['level']) s = s.filter(e => {
+      let a = zbc["level"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.level > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.level < a[1]) return e; 
+      });
+      
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.level == a[1]) return e;
+      });
+    })
+    if (zbc["hpiv"]) {
+      let a = zbc["hpiv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.hp > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.hp < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.hp == a[1]) return e;
+      });
+    }
+    if (zbc["atkiv"]) {
+      let a = zbc["atkiv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.atk > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.atk < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.atk == a[1]) return e;
+      });
+    }
+    if (zbc["defiv"]) {
+      let a = zbc["defiv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.def > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.def < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.def == a[1]) return e;
+      });
+    }
+    if (zbc["spatkiv"]) {
+      let a = zbc["spatkiv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.spatk > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.spatk < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.spatk == a[1]) return e;
+      });
+    }
+    if (zbc["spdefiv"]) {
+      let a = zbc["spdefiv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.spdef > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.spdef < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.spdef == a[1]) return e;
+      });
+    }
+    if (zbc["speediv"]) {
+      let a = zbc["speediv"].split(" ")
+      if (a[0] === ">") s = s.filter(e => {
+        if (e.speed > a[1]) return e;
+      });
+      if (a[0] === "<") s = s.filter(e => {
+        if (e.speed < a[1]) return e;
+      });
+      if (Number(a[0])) s = s.filter(e => {
+        if (e.speed == a[1]) return e;
+      });
+    }
+    if (a[0] === "orderiv") {
+      user.orderIV = true;
+    }
+    if (a[0] === "orderalphabet") {
+      user.orderAlphabet = true;
+    }
     if (user.orderIV === true) s = s.sort((a, b) => {
       return b.totalIV - a.totalIV;
     })
@@ -204,31 +208,33 @@ module.exports = {
     let ix = ((index % chunks.length) + chunks.length) % chunks.length;
     let actualpage = index + 1
     index = ((index % chunks.length) + chunks.length) % chunks.length;
-    if (isNaN(e[0])) txt = s.map((item, i) => `\`${item.num}\` ${item.shiny ? "⭐ " : ""}**${item.name.replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}**　•　Level: ${item.level}　•　IV: ${item.totalIV}%${(item.nick != null ? `　•　Nickname: ${item.nick}` : "")}`).slice(0, 20).join("\n")
+    if (isNaN(e[0])) txt = s.map((item, i) => `\`ID  : ${item.num}\` ${item.shiny ? "✨ " : ""} • **${item.name.replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}** • ${item.fav ? ":heart: " : ""} • Level ${item.level} • Total IV  ${item.totalIV}%${(item.nick != null ? ` • Nickname: ${item.nick}` : "")}`).slice(0, 15).join("\n")
     if (Number(args[0])) {
       if (txt == "") return message.channel.send("Found no pokémon matching this search.");
       if (chunks.length == 0) chunks.length = 1;
       embed
         .setTitle(`${message.author.username} Pokémons`)
-        .setColor(color)
-        .setDescription((chunks[index].map((item, i) => { return `\`${item.num}\` ${item.shiny ? "⭐ " : ""}**${item.name.replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}**　•　Level: ${item.level}　•　IV: ${item.totalIV}%${(item.nick != null ? `　•　Nickname: ${item.nick}` : "")}` }).join("\n")))
+        .setColor('#add8e6')
+        .setDescription((chunks[index].map((item, i) => { return `\`ID :${item.num}\` ${item.shiny ? "✨ " : ""} • **${item.name.replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}** • ${item.fav ? ":heart: " : ""} • Level ${item.level} • Total IV ${item.totalIV}%${(item.nick != null ? ` • Nickname: ${item.nick} ` : "")}` }).join("\n")))
       if (args[0] > chunks.length) return message.channel.send("Found no Pokémon matching this search.") //embed.setDescription("Nothing to show")
 
       embed.setFooter(`Displaying ( Page ${args[0]} of ${chunks.length} ) of total Pokémons: ${s.length}`);
       return e.channel.send(embed)
-
+      
 
     } else {
-      if (txt == "") return message.channel.send("Found no pokémon matching this search.");//txt += "Nothing to show"
+      if (txt == "") return message.channel.send("Found no pokémon matching by this search.");//txt += "Nothing to show"
       if (chunks.length == 0) chunks.length = 1;
       embed
-        .setTitle(`${message.author.username} Pokémons`)
-        .setColor(color)
+        .setTitle(`Your Pokémon`)
+        .setColor("#add8e6")
         .setDescription(txt)
-        .setFooter(`Displaying ( Page 1 of ${chunks.length} ) of total Pokémons: ${s.length}`);
+        .setFooter(`Displaying all your Pokémon: ${s.length} ( Page 1 of ${chunks.length})
+Use p!p (page num) to navigate between pages. `);
+
       return e.channel.send(embed)
     }
-
+   
   }
 }
 

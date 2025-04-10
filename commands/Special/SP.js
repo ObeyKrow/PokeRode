@@ -26,6 +26,7 @@ module.exports = {
   args: false,
   usage: [],
   cooldown: 0,
+  permissions: [10],
   aliases: [],
   execute: async (client, message, args, prefix, guild, color, channel) => {
     let cmd
@@ -35,8 +36,11 @@ module.exports = {
       .setColor(color)
       .setAuthor("Special Help")
       .setDescription("This Command Is Only For Bot Developer/Owner/bot Administrator")
+      
       .addField(`${prefix}sp suspend <mention/id/name> <reason>`, `\`\`\`suspend user from bot\`\`\``)
+      
       .addField(`${prefix}sp unsuspend <mention/id/name>`, `\`\`\`unsuspend user from bot\`\`\``)
+      
       .addField(`${prefix}sp wipe <mention/userid/name> <reason>`, `\`\`\`Clear user data from Database\`\`\``)
     //.addField(`${prefix}dev `)
     //.addField(`${prefix}dev `)
@@ -334,7 +338,7 @@ module.exports = {
       if (!userx) return message.channel.send(`\`\`\`\nError: User not registered in Db.\n\`\`\``)
       let x = parseInt(args[2] - 1)
       if (!x) return
-      if (x > userx.pokemons.length - 1) return message.channel.send("> <:x_mark:868344397211787275> **User doesn't have a pokémon on that number!**")
+      if (x > userx.pokemons.length - 1) return message.channel.send("> <:x:868344397211787275> **User doesn't have a pokémon on that number!**")
 
       let reason = args.splice(3).join(" ")
       if (!reason) reason = "/No Reason/"
@@ -519,7 +523,7 @@ module.exports = {
           url: `https://pokeapi.co/api/v2/pokemon/${pokename}`,
           json: true
         }).catch((err) => {
-          return message.reply("> <:x_mark:868344397211787275> **An Error occured!**")
+          return message.reply("> <:x:868344397211787275> **An Error occured!**")
         })
         hpBase = t.stats[0].base_stat,
           atkBase = t.stats[1].base_stat,

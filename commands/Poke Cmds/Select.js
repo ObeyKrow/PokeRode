@@ -28,6 +28,7 @@ module.exports = {
   args: false,
   usage: ["select [pokemonID]"],
   cooldown: 3,
+  permissions: [],
   aliases: ["s"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
 

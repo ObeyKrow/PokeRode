@@ -8,7 +8,7 @@ const ms = require("ms");
 
 module.exports = {
 	name: "egg",
-    description: "gives bot's average latency",
+    description: "Egg Can Be Hatched By p!hatch egg",
     category: "Miscellaneous",
     args: false,
     usage: ["egg"],
@@ -26,7 +26,7 @@ let embed = new Discord.MessageEmbed()
 .setTitle(`${message.author.username}'s Eggs 🥚`)
 .setDescription(`You currently have \`${user.egg}\` Egg.`)
 .setFooter(`Use p!hatch egg to Hatch the Egg`)
-.setThumbnail('https://cdn.discordapp.com/attachments/891557291436949504/951866284717510726/Pokemon_Egg_icon-icons.com_67525.png')
+.setThumbnail('https://cdn.discordapp.com/attachments/994237638158594069/994952687370108979/1657250704192.png')
 
 
     return message.channel.send(embed);

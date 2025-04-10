@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 const { MessageEmbed, MessageCollector, Collection } = require("discord.js");
 const { get } = require('request-promise-native')
@@ -7,24 +8,39 @@ const { getlength } = require("../../functions");
 const Pokemon = require("./../../Classes/Pokemon");
 let Spawn = require('../../models/spawn.js')
 let Guild = require('../../models/guild.js')
+const User = require('../../models/user.js')
+
 const Canvas = require('canvas')
  const canvas = Canvas.createCanvas(1192,670);
           const ctx = canvas.getContext('2d')
 
 
 module.exports = {
-  name: "dig",
-  description: "Dig A Wild Pokemon In The Cave",
-  category: "Pokemon",
+  name: "usebulldoze",
+  description: "Use A Bulldoze And Dig A Pokemon .",
+  category: "Pokemon Commands",
   args: false,
-  usage: ["dig"],
-  cooldown: 60,
+  usage: ["usebulldoze"],
+  cooldown: 15 ,
   permissions: [],
-    aliases: ["di"],
+   aliases: ["usebulldoze"],
     execute: async (client,message, args, prefix, guild, color, channel) => {
-    let names = ["diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon","diglett","geodude","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","diglett","diglett","geodude","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","diglett","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","rihorn","groudon"]
-    let name = names[Math.floor(Math.random() * names.length)]
 
+       let user = await User.findOne({id: message.author.id})
+
+     if (user.bulldoze<= 0) return message.channel.send(`> ❌ You need 1 Bulldoze to dig you currently have ${user.bulldoze} you can get buy it from jake. `); 
+
+
+      if (user.balance<= 5) return message.channel.send(`> ❌ You need 5 Credits to pay the gateway you currently have ${user.balance} you can get credits by gambling or catching ,Sometime It Includes Tax 1 Credits. `); 
+      
+      await guild.save()
+            user.balance = user.balance - 5
+           await user.save()
+
+
+      
+      let names = ["diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon","diglett","geodude","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","diglett","diglett","geodude","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","diglett","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon","diglett","regirock","rhyperior","geodude","geodude","golem","golurk","graveler","onix","diglett","groudon"]
+    let name = names[Math.floor(Math.random() * names.length)]
 
 
     let ab = {
@@ -41,12 +57,9 @@ module.exports = {
           } else if (check === 3) {
             url = `https://assets.pokemon.com/assets/cms2/img/pokedex/full/${x.id}.png`
           }
-    var shiny = false
-    //type = galarian
-    gen = Math.floor(Math.random() * 8096);
-    if (gen <= 10) shiny = true;
+
        let lvl = Math.floor(Math.random()*69) + 1
-       let pokemon = new Pokemon({ name: x.name.toLowerCase(), id: x.id, shiny: shiny,  url: url }, lvl);
+       let pokemon = new Pokemon({ name: x.name.toLowerCase(), id: x.id, shiny: false,  url: url }, lvl);
 
        pokemon = await classToPlain(pokemon)
 
@@ -58,20 +71,13 @@ module.exports = {
        spawn.pokemon.push(pokemon)
        spawn.time = 259200000 + Date.now()
        await spawn.save()
-
-        let bg = "https://cdn.discordapp.com/attachments/986850465423720472/989876223779946516/download_70.jpg";
-       ;
-         
-          const background = await Canvas.loadImage(bg)
-          ctx.drawImage(background,0,0,canvas.width,canvas.height)
-          const pk = await Canvas.loadImage(pokemon.url)
-          ctx.drawImage(pk,300,100,550,550)
+    user.summon = user.summon - 7
+    await user.save();
            embedx = new Discord.MessageEmbed()
-            .setAuthor(`A New Pokemon Has Appeared`)
-            .setDescription(`Guess the Pokemon and type \`${guild.prefix}catch <pokemon name>\``)
-             .setColor('#add8e6')
-             .attachFiles([{ name: "new.png", attachment: canvas.toBuffer() }])
-            .setImage("attachment://" + "new.png")
+            .setAuthor(`Wild Pokemon Appeared!`)
+            .setDescription(`Guess the Pokémon аnd type \`${guild.prefix}catch <pokémon name>\` to cаtch it!`)
+             .setColor('#964B00')
+            .setImage(pokemon.url)
     })
     return message.channel.send(embedx)
   

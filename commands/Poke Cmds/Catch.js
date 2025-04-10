@@ -22,7 +22,8 @@ module.exports = {
   name: "catch",
   description: "Catch a wild pokemon when it appears in the chat.",
   category: "Pokemon Commands",
-  cooldown: 5,
+  cooldown: 0,
+  permissions: [],
   args: false,
   usage: ["catch <pokemon>"],
   aliases: ["c"],
@@ -80,8 +81,8 @@ module.exports = {
       await user.caught.push(poke);
       user.lbcaught = user.lbcaught + 1;
 
-      /*if (poke.shiny) {
-        const hook = new Discord.WebhookClient('877411651974996051', 'AMsZlHF_xDp40AGA1fp-RENJTOtEY9B4SlJHBLnQ7z72r_-8c9UxcnJqee9M4-Az0qnK');
+      if (poke.shiny) {
+        const hook = new Discord.WebhookClient('1006215613812846723', 'b4tvfqjbHXta7I-VsVKI_RXelufMRpT62X-haQzfa5Or69KHNDGmQDPll2gttYz2kRJc');
         let id = parseInt(poke.url.replace(".png", "").substring(56))
         const shinyemb = new MessageEmbed()
           .setAuthor(`${message.author.tag} caught a Shiny ${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}!`)
@@ -91,12 +92,12 @@ module.exports = {
         hook.send(shinyemb)
         user.shinyCaught = user.shinyCaught + 1;
         await user.save()
-      }*/
+      }
       let caughtNo = user.caught.filter(r => r.name == name).length
       let balanceToAdd = 0
-      if (caughtNo == 0) balanceToAdd = 25;
-      if (caughtNo == 9) balanceToAdd = 250;
-      if (caughtNo == 99) balanceToAdd = 2500;
+      if (caughtNo == 1) balanceToAdd = 25;
+      if (caughtNo == 10) balanceToAdd = 250;
+      if (caughtNo == 100) balanceToAdd = 2500;
       user.balance = user.balance + parseInt(balanceToAdd)
       await user.save();
       await user.markModified("pokemons");
@@ -104,8 +105,34 @@ module.exports = {
 
       let u, footer
       if (user.shname !== null) {
-        name.toLowerCase().replace(" ", "-") == user.shname.toLowerCase().replace(" ", "-") ? u = `> ${config.yes} Congratulations ${message.author}, You have caught a **Level ${poke.level} ${poke.shiny ? "Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}** (${poke.totalIV}% IV${balanceToAdd == 0 ? "." : `, you received ${balanceToAdd} Credits`}).\n**+1 Shiny Count**` : u = `> ${config.yes} Congratulations ${message.author}, You have caught a **Level ${poke.level} ${poke.shiny ? "Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}** (${poke.totalIV}% IV${balanceToAdd == 0 ? "." : `, you received ${balanceToAdd} Credits`}).`
-
+        name.toLowerCase().replace(" ", "-") == user.shname.toLowerCase().replace(" ", "-") ? u = `**A Wild ${poke.name} Has Been Caught**.\n 
+  \`====General Info====\`
+  \`Level : ${poke.level} ${poke.shiny ? "Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}\`
+  \`Total IV : ${poke.totalIV}% IV\`
+  \`Nature : ${poke.nature}\`\n
+  \`Ability: N/A\`\n
+  \`Shiny: ${poke.shiny}\`
+  \`====Shiny Chain====\`
+  \`${balanceToAdd == 0 ? "." : `Credits Reiceived \`${balanceToAdd} Credits`}.\`\n\`Shiny Chain + 1\`\n
+\`====Drops====\`
+\`Tech Crystals\` : ${user.techcrystals}
+\`Crystals\` : ${user.crystals}
+\`Wood\` : ${user.wood}
+\`Rodeboosts\` : ${user.rodeboost}
+\`` : u = `**A Wild ${poke.name} Has Been Caught**.\n 
+\`====General Info====\`
+\`Level : ${poke.level} ${poke.shiny ? "Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}\`
+\`Total IV : ${poke.totalIV}% IV\`
+\`Nature : ${poke.nature}\`\n
+\`Ability: N/A \`\n
+\`Shiny: ${poke.shiny}\`
+\`====Shiny Chain====\`
+\`${balanceToAdd == 0 ? "." : `, Credits Reiceived \` ${balanceToAdd}`}\`\n +1 Caught\`\n
+\`====Drops====\`
+\`Tech Crystals\` : ${user.techcrystals}
+\`Crystals\` : ${user.crystals}
+\`Wood\` : ${user.wood}
+\`Rodeboosts\` : ${user.rodeboost}`
 
         
 
@@ -117,7 +144,20 @@ module.exports = {
           await user.save()
         }
       } else {
-        u = `**${config.yes} Congratulations ${message.author}, You have caught a __${poke.shiny ? "✨ Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}__\n\n\`Level - ${poke.level}\`\n\`IV% - ${poke.totalIV}\`\n\`Nature - ${poke.nature}\`\n\`Added To Pokédex - ${balanceToAdd == 0 ? "." : `You received ${balanceToAdd} Credits`}\`**.`
+        u = `A Wild ${poke.name} Has Been Caught**.\n, 
+        \`====General Info====\`
+        __${poke.shiny ? "✨ Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}\`\n\n\`
+\`Level\` : ${poke.level}\`\n
+\`Total IV%\` - ${poke.totalIV}\`\n\`
+\`Nature\` : ${poke.nature}\`\n
+\`Ability: N/A \`\n
+\`Shiny: ${poke.shiny}\`
+\`Added To Pokédex - ${balanceToAdd == 0 ? "." : `Credits Received ${balanceToAdd}`}\`\n +1 Caught\`\n
+\`====Drops====\`
+\`Tech Crystals\` : ${user.techcrystals}
+\`Crystals\` : ${user.crystals}
+\`Wood\` : ${user.wood}
+\`Rodeboosts\` : ${user.rodeboost}`
         footer = " "
       }
 //${poke.shiny ? "Shiny " : ""}${poke.name.replace(/-+/g, " ").replace(/-+/g, " ").replace(/\b\w/g, l => l.toUpperCase())}
@@ -125,8 +165,9 @@ module.exports = {
         .setFooter(footer)
         .setColor(color)
         .setDescription(u)
-        .setFooter(`Click ℹ️ to info the Pokémon & Click ❌ to Release The Pokémon`)
-        .setThumbnail(`${poke.url}`)
+        .setFooter(`This Is Your ${user.shcount} Shiny Chain | Note : Do Not Auto Catch This Could Lead To A Suspension Or Server / Mutual Server Blacklist`)
+        .setImage(`${poke.url}`)
+        .setThumbnail(`https://cdn.discordapp.com/attachments/991630664338243634/1015959984577716284/dcbbqpk-dd29029f-4591-4244-85b3-e45876a8bd91.gif`)
 
         let msg = await message.channel.send(embed);
 

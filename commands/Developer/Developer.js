@@ -36,10 +36,11 @@ const config = require('../../config.js')
 module.exports = {
   name: "dev",
   description: "//",
-  category: "developer",
+  category: "Dev",
   args: false,
   usage: [],
   cooldown: 0,
+  permissions: [10],
   aliases: [],
   execute: async (client, message, args, prefix, guild, color, channel) => {
     let cmd
@@ -48,8 +49,8 @@ module.exports = {
     const embed = new MessageEmbed()
       .setColor(color)
       .setAuthor("Dev Help")
-      .setDescription(`\`\`\`\nThis Command Is Only For Bot Developer/Owner/bot Administrator\n\n() : Alias\n<> : Compulsory\n[] : Optional\np  : User's Pokémon\n\`\`\``)
-
+      .setDescription(`\`\`\`\nThis Command Is Only For Bot Developer/Owner/bot Administrator\n\n() : Alias\n<> : Compulsory\n[] : Optional\np  : User's Pokémon\n\`\`\``) 
+      
       .addField("Suspend",
         `\`\`\`\n-> ${prefix}dev suspend <@user/userId/userName> [reason] : Suspend an user.\n`
         + `-> ${prefix}dev unsuspened <@user/userId/userName> : Unsuspend an user.\n`

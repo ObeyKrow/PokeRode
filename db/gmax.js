@@ -377,7 +377,8 @@ module.exports = [
     spatk: 83,
     spdef: 80,
     speed: 117
-  }
+  },
+  
 
 
 

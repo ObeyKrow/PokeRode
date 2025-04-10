@@ -76,10 +76,11 @@ module.exports = {
             : desc = `${(user.pokemons[selected].nick != null ? `**Nickname:** ${user.pokemons[selected].nick}\n` : "")}`
             + `**Max Level**\n`
         let embed = new MessageEmbed()
-            .setTitle(`${(user.pokemons[selected].shiny ? " :star:" : "")} Level ${level} ${capitalize((user.pokemons[selected].name).replace(/-+/g, " "))}`)
+            .setTitle(`${(user.pokemons[selected].shiny ?" ✨" : "")} Level ${level}  ${capitalize(user.pokemons[selected].name)}`)
+            
             .setDescription(desc)
             .setThumbnail(message.author.displayAvatarURL())
-            .setColor('#add8e6')
+            .setColor("#36393e")
         if (gen8) {
             let hpBase = gen8.hp,
                 atkBase = gen8.atk,
@@ -87,7 +88,7 @@ module.exports = {
                 spatkBase = gen8.spatk,
                 spdefBase = gen8.spdef,
                 speedBase = gen8.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -126,7 +127,7 @@ module.exports = {
                 spatkBase = form.spatk,
                 spdefBase = form.spdef,
                 speedBase = form.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+           let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -165,7 +166,7 @@ module.exports = {
                 spatkBase = concept.spatk,
                 spdefBase = concept.spdef,
                 speedBase = concept.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -204,7 +205,7 @@ module.exports = {
                 spatkBase = galarian.spatk,
                 spdefBase = galarian.spdef,
                 speedBase = galarian.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -243,7 +244,7 @@ module.exports = {
                 spatkBase = forms.spatk,
                 spdefBase = forms.spdef,
                 speedBase = forms.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -282,7 +283,7 @@ module.exports = {
                 spatkBase = mega.spatk,
                 spdefBase = mega.spdef,
                 speedBase = mega.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -322,7 +323,7 @@ module.exports = {
                 spatkBase = shadow.spatk,
                 spdefBase = shadow.spdef,
                 speedBase = shadow.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -361,7 +362,7 @@ module.exports = {
                 spatkBase = primal.spatk,
                 spdefBase = primal.spdef,
                 speedBase = primal.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -406,7 +407,7 @@ module.exports = {
                 spatkBase = gmax.spatk,
                 spdefBase = gmax.spdef,
                 speedBase = gmax.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -445,7 +446,7 @@ module.exports = {
                 spatkBase = pokemon.spatk,
                 spdefBase = pokemon.spdef,
                 speedBase = pokemon.speed;
-            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+            let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
                 atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
                 defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
                 spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -494,7 +495,7 @@ module.exports = {
             spatkBase = t.stats[3].base_stat,
             spdefBase = t.stats[4].base_stat,
             speedBase = t.stats[5].base_stat;
-        let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4) * level) / 100) + level + 10),
+        let hpTotal = Math.floor(Math.floor((2 * hpBase + hp + (0 / 4)) * level / 100 + 5) * 1.3),
             atkTotal = Math.floor(Math.floor((2 * atkBase + atk + 0) * level / 100 + 5) * 0.9),
             defTotal = Math.floor(Math.floor((2 * defBase + def + (0 / 4)) * level / 100 + 5) * 1),
             spatkTotal = Math.floor(Math.floor((2 * spatkBase + spatk + (0 / 4)) * level / 100 + 5) * 1.1),
@@ -573,7 +574,7 @@ module.exports = {
             .attachFiles([{ name: "Pokemon.png", attachment: url }])
             .setImage("attachment://" + imgname)
             .setFooter(`Displaying Pokémon: ${selected + 1}/${user.pokemons.length} \nTotal Pokémons: ${s.length}`)
-            .setColor('#add8e6')
+            .setColor("	#3498DB")
         return message.channel.send(embed)
       o
     }

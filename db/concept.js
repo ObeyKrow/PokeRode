@@ -257,7 +257,7 @@ module.exports = [
      speed: 90
    },
   {
-     name: "Prime-Arceus",
+     name: "prime-arceus",
      type: "Normal | Flying ",
      url: "https://cdn.discordapp.com/attachments/986850465423720472/988029401503502386/d8y6e9g-d52d390e-523d-4d65-92e8-2bb71047c88a.png",
      hp: 1276,
@@ -344,30 +344,7 @@ module.exports = [
      spdef: 100,
      speed: 50
    },
-  {    
-    name: "summer-eelektross",
-    type: "Ghost | Water",
-    url: "https://cdn.discordapp.com/attachments/986898624959094824/988710406807777310/1655790842338.png",
-    hp:  95,
-    atk: 125,
-    def: 79,
-    spatk: 60,
-    spdef: 100,
-    speed: 81
-    
-  },
-  {    
-    name: "summer-magikarp",
-    type: "Ghost | Water",
-    url: "https://cdn.discordapp.com/attachments/987996729490149439/988737513797595136/1655803768083.png",
-    hp:  20,
-    atk: 10,
-    def: 55,
-    spatk: 15,
-    spdef: 20,
-    speed: 80
-    
-  },
+
   {    
     name: "the-jedi",
     type: "Fire | Normal",
@@ -392,7 +369,161 @@ module.exports = [
     speed: 125
     
   },
+
+      {
+     name: "tentacle-sexy-gardevoir",
+     type: "Fairy | Psychic",
+     url: "https://cdn.discordapp.com/attachments/790035616414695427/991544885326921728/0fbfa80e3229a5a4323ddda16dc245e5_1.png",
+     hp: 150,
+     atk: 150,
+     def: 110,
+     spatk: 250,
+     spdef: 120,
+     speed: 200
+   },
+      {
+     name: "prime-lucifer",
+     type: "Fairy | Psychic",
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/992045262417690624/d98m5bo-ebf9642c-e47b-43e5-b2f3-db470276f176.png",
+     hp: 550,
+     atk: 950,
+     def: 1110,
+     spatk: 3250,
+     spdef: 1120,
+     speed: 2000
+   },
+      {
+     name: "lucifer-reincarnation",
+     type: "Fairy | Psychic",
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/992047382407688202/maniphet_by_h0lierth4nth0u_dea1fy8-350t.png",
+     hp: 2350,
+     atk: 8250,
+     def: 2110,
+     spatk: 5250,
+     spdef: 4120,
+     speed: 8000
+   },
+       {
+     name: "newbie-prep-lucifer",
+     type: "Fairy | Psychic",
+     url: "https://cdn.discordapp.com/attachments/992042766005698580/992047382697103360/daptr3i-6a886f58-026f-4ac9-98f4-f77d521bfd32.png",
+     hp: 1534,
+     atk: 8570,
+     def: 4210,
+     spatk: 6890,
+     spdef: 1920,
+     speed: 20000
+   },
    {
+     name: "techno-the-pig",
+     type: "Pig",
+     url: "https://media.discordapp.net/attachments/992042766005698580/992418330818384043/1656681157296.png",
+     hp: 100,
+     atk: 750,
+     def: 300,
+     spatk: 450,
+     spdef: 200,
+     speed: 200
+   },
+  {
+		name: `origin-palkia`,
+		url:  `https://legends.pokemon.com/assets/pokemon/pokemon_palkia.png`,
+		hp: `90`,
+		atk: `100`,
+		def: `100`,
+		spatk: `150`,
+		spdef: `120`,
+		speed: `120`
+	},
+  {
+     name: "swagger-bauz",
+     type: "grass | flying",
+     url: "https://imgur.com/9UAOxNv.png",
+     hp: 68,
+     atk: 55,
+     def: 55,
+     spatk: 50,
+     spdef: 50,
+     speed: 42
+   },
+   {
+     name: "corrupted-x",
+     type: "Fire | Psychic",
+     url: "https://imgur.com/zsOUNKM.png",
+      hp: 1254,
+    atk: 4975,
+    def: 5450,    
+    spatk: 1989,
+    spdef: 3921,
+    speed: 8008
+   },
+  {
+     name: "birthday-obey",
+     type: "Grass",
+     url: "https://imgur.com/kNGvj3o.png",
+      hp: 45,
+    atk: 45,
+    def: 55,    
+    spatk: 45,
+    spdef: 55,
+    speed: 63
+  },
+    {
+     name: "peta-caul",
+     type: "Water | Dragon",
+     url: "https://cdn.discordapp.com/attachments/986850465423720472/990853287756570644/d7zj0d5-e4dd9d1f-468e-4a71-8a00-17f0404fd911.png",
+     hp: 160,
+     atk: 106,
+     def: 102,
+     spatk: 63,
+     spdef: 70,
+     speed: 104
+   },
+    {
+     name: "ub-laser",
+     type: "Fire | Flying",
+     url: "https://cdn.discordapp.com/attachments/987358755802992700/990622048864850030/dbu7n8j-75e4ea24-c5a2-48fc-ac69-9e84dff9d0ab.png",
+     hp: 122,
+     atk: 79,
+     def: 79,
+     spatk: 149,
+     spdef: 107,
+     speed: 29
+   },
+    {
+     name: "senec-id",
+     type: "Bug | Water",
+     url: "https://cdn.discordapp.com/attachments/987358755802992700/990622699585937438/mega_sonectid_by_smiley_fakemon_d8td7s0-pre.png",
+     hp: 72,
+     atk: 72,
+     def: 75,
+     spatk: 72,
+     spdef: 70,
+     speed: 371
+   },
+     {
+     name: "sunlord",
+     type: "Dark | Fairy",
+     url: "https://imgur.com/CG88WVN.png",
+     hp: 135,
+     atk: 85,
+     def: 125,
+     spatk: 150,
+     spdef: 150,
+     speed: 115
+   },
+  {
+     name: "zaptres",
+     type: "Ice | Fire | Thunder | Flying",
+     url: "https://imgur.com/I5RV7SW.png",
+     hp: 126,
+     atk: 154,
+     def: 120,
+     spatk: 130,
+     spdef: 100,
+     speed: 170
+   },
+  {
      name: "odd-charizard",
      type: "Fire | Dragon",
      url: "https://cdn.discordapp.com/attachments/987358755802992700/990629503233568818/volcarizard_by_tomycase_d6z766v-fullview.png",
@@ -461,7 +592,42 @@ module.exports = [
     speed: 90
     
   },
-     {
+    {    
+    name: "summer-eelektross",
+    type: "Ghost | Water",
+    url: "https://cdn.discordapp.com/attachments/986898624959094824/988710406807777310/1655790842338.png",
+    hp:  95,
+    atk: 125,
+    def: 79,
+    spatk: 60,
+    spdef: 100,
+    speed: 81
+    
+  },
+  {    
+    name: "summer-magikarp",
+    type: "Ghost | Water",
+    url: "https://imgur.com/CRREJDF.png",
+    hp:  20,
+    atk: 10,
+    def: 55,
+    spatk: 15,
+    spdef: 20,
+    speed: 80
+    
+  },
+    {
+     name: "chariken",
+     type: "Fire | Fighting",
+     url: "https://imgur.com/RNOAHIJ.png",
+     hp: 150,
+     atk: 200,
+     def: 60,
+     spatk: 250,
+     spdef: 120,
+     speed: 200
+   },
+    {
      name: "maxlord",
      type: "Steel | Fairy",
      url: "https://imgur.com/QRUWdNt.png",
@@ -472,80 +638,6 @@ module.exports = [
      spdef: 120,
      speed: 150
    },
-    {
-     name: "chariken",
-     type: "Fire | Fighting",
-     url: "https://cdn.discordapp.com/attachments/973589548548382750/981521485900423238/1654083349207.png",
-     hp: 150,
-     atk: 200,
-     def: 60,
-     spatk: 250,
-     spdef: 120,
-     speed: 200
-   },
-      {
-     name: "tentacle-sexy-gardevoir",
-     type: "Fairy | Psychic",
-     url: "https://cdn.discordapp.com/attachments/790035616414695427/991544885326921728/0fbfa80e3229a5a4323ddda16dc245e5_1.png",
-     hp: 150,
-     atk: 150,
-     def: 110,
-     spatk: 250,
-     spdef: 120,
-     speed: 200
-   },
-      {
-     name: "prime-lucifer",
-     type: "Fairy | Psychic",
-     url: "https://cdn.discordapp.com/attachments/992042766005698580/992045262417690624/d98m5bo-ebf9642c-e47b-43e5-b2f3-db470276f176.png",
-     hp: 550,
-     atk: 950,
-     def: 1110,
-     spatk: 3250,
-     spdef: 1120,
-     speed: 2000
-   },
-      {
-     name: "lucifer-reincarnation",
-     type: "Fairy | Psychic",
-     url: "https://cdn.discordapp.com/attachments/992042766005698580/992047382407688202/maniphet_by_h0lierth4nth0u_dea1fy8-350t.png",
-     hp: 2350,
-     atk: 8250,
-     def: 2110,
-     spatk: 5250,
-     spdef: 4120,
-     speed: 8000
-   },
-      {
-     name: "newbie-prep-lucifer",
-     type: "Fairy | Psychic",
-     url: "https://cdn.discordapp.com/attachments/992042766005698580/992047382697103360/daptr3i-6a886f58-026f-4ac9-98f4-f77d521bfd32.png",
-     hp: 1534,
-     atk: 8570,
-     def: 4210,
-     spatk: 6890,
-     spdef: 1920,
-     speed: 20000
-   },
-    {
-     name: "techno-the-pig",
-     type: "pig",
-     url: "https://media.discordapp.net/attachments/992042766005698580/992418330818384043/1656681157296.png",
-     hp: 100,
-     atk: 800,
-     def: 280,
-     spatk: 500,
-     spdef: 180,
-     speed: 230
-   },
-	{
-		name: `origin-palkia`,
-		url:  `https://legends.pokemon.com/assets/pokemon/pokemon_palkia.png`,
-		hp: `90`,
-		atk: `100`,
-		def: `100`,
-		spatk: `150`,
-		spdef: `120`,
-		speed: `120`
-	},
+ 
+ 
 ]

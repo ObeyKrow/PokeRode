@@ -7,14 +7,14 @@ const ms = require("ms");
 
 
 module.exports = {
-    name: "quest",
+    name: "minerquest",
     description: "complete quests for reward",
     category: "tst",
     args: false,
-    usage: ["quest"],
+    usage: ["minersquest"],
     cooldown: 3,
     permissions: [],
-    aliases: ["q"],
+    aliases: ["mq"],
     execute: async (client, message, args, prefix, guild, color, channel) => {
 
       	
@@ -55,51 +55,51 @@ if (apiping2 > 799) emoji = "<:fill:873263250224087040><:bar2:873263404192763986
 if (apiping2 > 999) emoji = "<:fill:873263250224087040><:bar2:873263404192763986><:bar2:873263404192763986><:bar2:873263404192763986><:fill2:873266000307572806>"
 if (apiping2 > 1001) emoji = "**Quest Completed ✅**"
       let embed = new MessageEmbed()
-      .setAuthor('Quests')
+      .setAuthor('Miner Quests')
         .setColor("	#36393e")
-      .setDescription(`Complete these quests to earn special rewards!
-      **Quest #1**\n**Catch 5000 pokémon.** \n \`${user.caught.length.toString()}/5000\`\n**Reward:** 500,000 Pokecoins\n**Quest #2**\n**Release 1000 pokémon.**\n \`${user.released}/1000\`\n**Reward:** 25,000 Pokecoins\n**Quest #3**\n**Open 1000 Eggs**\n \`${user.openedegg}/1000\`\n**Reward:** 1,000,000 Pokecoins
-\n**Extra Quests**
-**Quest #1**\n**Get Yourself 10,000,000 balance**\n \`${user.balance}/10,000,000\`\n**Reward:** 5,000,000 Pokecoins.`)
+      .setDescription(`Miners Quests Gives USD ( NOTE THIS IS NOT REAL MONEY)!
+      
+      **Quest #1**\n**I Need 10 Wood Please Get Me I Will Pay You 10 USD.** \n \`${user.wood}/10\`\n**Reward:** 10 💵\n
+      **Quest #2**\n**Need 100 Wood I Will Pay 10% More.**\n \`${user.wood}/100\`\n**Reward:** 110 💵\n
+      **Quest #3**\n**Get 10 Crystals**\n \`${user.crystals}/10\`\n**Reward:** 10 💵
+\n**Quest #4**\n**Get 100 Crystals 10% Profit**\n \`${user.crystals}/100\`\n**Reward:** 110 💵.`)
   
 
     if (!args[0]) return message.channel.send(embed);
     if (args[0].toLowerCase() == "claim1") {
-      if (user.caught.length.toString() <= 1000) return message.channel.send(">  Complete the Quest first")
-      if(user.questclaim === 1) return message.channel.send(">  You have already claimed the quest reward")
-     user.balance = user.balance + 50000;
-     user.questclaim = user.questclaim +1;
+      if (user.wood <= 10) return message.channel.send(">  You Dont Have Enough Wood")
+      
+     user.usd = user.usd + 10;
+     user.wood = user.wood -10;
      await user.save();
-      return message.channel.send('>  :tada: Quest Completed. Quest Rewards Recived!!' )
+      return message.channel.send('>  :tada: You Claimed Quest Serial Number 1' )
       }
         if (!args[0]) return message.channel.send(embed);
     if (args[0].toLowerCase() == "claim2") {
-      if (user.released <= 1001) return message.channel.send(">  Complete the Quest first")
-      if(user.questclaim2 === 1) return message.channel.send(">  You have already claimed the Quest reward")
-     user.balance = user.balance + 25000;
-     user.questclaim2 = user.questclaim2 + 1;
+      if (user.wood <= 100) return message.channel.send(">  You Dont Have Enough Wood")
+      
+     user.usd = user.usd + 110;
+     user.wood = user.wood - 100;
      await user.save();
-      return message.channel.send('>  :tada: Quest Completed. Quest Rewards Recived!!' )
+      return message.channel.send('>  :tada: You Claimed Quest Serial Number 2' )
     }
    if (!args[0]) return message.channel.send(embed);
     if (args[0].toLowerCase() == "claim3") {
-      if (user.openedegg <= 10) return message.channel.send(">  Complete the Quest first")
-      if(user.questclaim3 === 1) return message.channel.send(">  You have already claimed the Quest reward")
-     user.balance = user.balance + 10000;
-     user.questclaim3 = user.questclaim3 + 1;
+      if (user.crystals <= 10) return message.channel.send(">  You Dont Know Enough Crystals")
+      
+     user.usd = user.usd + 10;
+     user.crystals = user.crystals - 10;
      await user.save();
-      return message.channel.send('>  :tada: Quest Completed. Quest Rewards Recived!!' )
+      return message.channel.send('>  :tada: You Claimed Quest Serial Number 3' )
     }
       if (!args[0]) return message.channel.send(embed);
     if (args[0].toLowerCase() == "claim4") {
-      if (user.balance <= 1000000) return message.channel.send(">  Complete the Quest first")
-      if(user.questclaim4 === 1) return message.channel.send(">  You have already claimed the Quest reward")
-     user.balance = user.balance + 5000000;
-     user.questclaim4 = user.questclaim4 + 1;
-         await User.findOne({id: `${user}`})
-user.badges.push("988135781820420096")
+      if (user.crystals <= 100) return message.channel.send(">  You Dont Have Enough Crystals")
+      
+     user.usd = user.usd + 110;
+     crystals = user.crystals - 100;
      await user.save();
-      return message.channel.send('>  :tada: Quest Completed. Quest Rewards Recived!!' )
+      return message.channel.send('>  :tada: You Claimed Quest Serial Number 4' )
     }
     }
 }

@@ -6,10 +6,9 @@
   yes: "✅",
   no: "❌",
 
-  owners: ["931905398846410753", "828987913822928896", "984446125442474045",
-"791609428961001492"],           
+  owners: ["931905398846410753", "828987913822928896","791609428961001492"],
 
-  special: ["665501328918970388", "545551162036977664", "953585429205102652","931905398846410753","791609428961001492"],
+  special: [""],
 
  mongo_atlas: {
     username: process.env.username,
@@ -27,8 +26,8 @@
       Token: process.env.webtoken,
     },
     guild: {
-      ID: '980427208004861962',
-      Token: '_jTWlJJspuly_GHqLoRgXCO4hH4eXTjqc--cx7luli2FxWbybtxkVgPoZHOGEalHGX09'
+      ID: '1007543787758813256',
+      Token: 'ZMhgi5nOITYJUScwMQqr4f388I9QvtlUnBM_RG9dXAB9HrpZSkxONwSeKwTHHPAffqK8'
     },
 	vote: {
 		ID: '',

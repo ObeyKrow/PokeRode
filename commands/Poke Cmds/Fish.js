@@ -16,20 +16,30 @@ const Canvas = require('canvas')
 
 
 module.exports = {
-  name: "fish",
-  description: "Hunt a wild pokemon every 3 minutes.",
-  category: "Testing",
+  name: "useoldrod",
+  description: "Old Rod .",
+  category: "Pokemon Commands",
   args: false,
-  usage: ["fish"],
+  usage: ["useoldrod"],
   cooldown: 6 ,
   permissions: [],
-   aliases: ["fs"],
+   aliases: ["useoldrod"],
     execute: async (client,message, args, prefix, guild, color, channel) => {
 
+       let user = await User.findOne({id: message.author.id})
+  
+      if (user.normalfishingpass<= 0) return message.channel.send(`> ❌ You need 1 Normal Fisherman Pass To Fish , You Currently Have ${user.normalfishingpass} you can by buying from Eric. `);
+
+      if (user.balance<= 10) return message.channel.send(`> ❌ You need 10 Credits to use bait for fishing you currently ${user.balance} you can get credits by gambling or catching ,Sometime It Includes Tax 1 Credits. `); 
       
-  let user = await User.findOne({id: message.author.id})
-       
-    let names = ["alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shelder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","manaphy","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","manaphy","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","manaphy","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","phione","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","kyogre","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","sharpedo","wailmer","wailord","bruxish","phione","kyogre","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","phione","mantine","seel","dewgong","spheal","walrein","sharpedo"]
+      
+      await guild.save()
+            user.balance = user.balance - 10
+           await user.save()
+
+
+      
+      let names = ["alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","wailmer","wailmer","wailmer","bruxish","arctovish","dracovish","psyduck","dewgong","golduck","corphish","crawdaunt","krabby","kingler","alomomola","basculin","carvanha","chinchou","eelektrik","eelektross","feebas","finneon","goldeen","gorebyss","huntail","lanturn","luvdisc","magikarp","qwilfish","seaking","stunfisk","tynamo","relicanth","horsea","seadra","remoraid","octillery","kingdra","seadra","tentacool","tentacruel","staryu","starmie","shellder","cloyster","clampearl","corsola","mantine","seel","dewgong","spheal","walrein","wailmer"]
     let name = names[Math.floor(Math.random() * names.length)]
 
 
@@ -64,9 +74,9 @@ module.exports = {
     user.summon = user.summon - 7
     await user.save();
            embedx = new Discord.MessageEmbed()
-            .setAuthor(`A Fish has Grabbed The Hook !!`)
+            .setAuthor(`Wild Pokemon Appeared!`)
             .setDescription(`Guess the Pokémon аnd type \`${guild.prefix}catch <pokémon name>\` to cаtch it!`)
-             .setColor('#292b2c')
+             .setColor('#0000FF')
             .setImage(pokemon.url)
     })
     return message.channel.send(embedx)

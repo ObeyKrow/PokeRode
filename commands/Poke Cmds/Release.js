@@ -5,6 +5,7 @@ module.exports = {
   name: "release",
   category: "Information",
   description: "release a pokemon",
+  permissions: [],
   usage: ["```\n(p = Your Pokémon)\nrelease <latest/l/0> / <p1_Id p2_Id p3_Id...> / <all>```"],
   execute: async (client, message, args, prefix, guild, color, channel) => {
 

@@ -7,11 +7,11 @@ const ms = require("ms");
 
 
 module.exports = {
-	name: "buy",
-    description: "gives bot's average latency",
+	name: "d1buy",
+    description: "buying eggs cost 3000 credits",
     category: "Miscellaneous",
     args: false,
-    usage: ["buy"],
+    usage: ["d1buy"],
     cooldown: 3,
     permissions: [],
     aliases: [],
@@ -22,13 +22,13 @@ module.exports = {
 
     if (args[0].toLowerCase() == "egg") {
       
-              if (user.balance < 3001) return message.channel.send(`You don't have enough balance to buy egg`)
+              if (user.balance < 1000) return message.channel.send(`You don't have enough balance to buy egg`)
 
-      user.balance = user.balance - 3000
+      user.balance = user.balance - 1000
       user.egg = user.egg + 1
       await user.save()
 
-      return message.channel.send(`**You have successfully buyed 1 egg**`)
+      return message.channel.send(`**You have successfully Bought 1 egg**`)
     }
     
 

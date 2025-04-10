@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const User = require("./../../models/user");
 module.exports = {
   name: "wipe",
-  category: "developer",
+  category: "Dev",
   description: "wipe a server or a user",
   usage: "wipe server <serverid> || wipe user <userid>",
   execute: async(client, message, args, prefix) => {
@@ -15,3 +15,4 @@ module.exports = {
       })
   }
 }
+

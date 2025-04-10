@@ -5,6 +5,7 @@ module.exports = {
     category: 'Information',
     description: 'remove a pokemon to your favorites list',
     usage: 'removefav [pokemonNumber]',
+   permissions: [],
     aliases: ["rf"],
     execute: async (client, message, args, prefix, guild, color, channel) => {
 

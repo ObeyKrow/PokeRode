@@ -16,6 +16,7 @@ module.exports = {
   args: false,
   usage: [`crate / <Prefix>crate open <bronze/silver/golden/diamond/deluxe> [amount]`],
   cooldown: 3,
+  permissions: [],
   aliases: ["crate"],
 
   execute: async (client, message, args, prefix, guild, color, channel) => {

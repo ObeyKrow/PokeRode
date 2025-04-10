@@ -99,15 +99,15 @@ module.exports = [
 		speed: `106`
 	},
   {
-		name: `complete-zygarde`,
-    number: "718",
-		url: `https://imgur.com/qIbrTxD`,
-		hp: `216`,
-		atk: `100`,
-		def: `121`,
-		spatk: `91`,
-		spdef: `95`,
-		speed: `95`
+		name: ``,
+    number: "",
+		url: ``,
+		hp: ``,
+		atk: ``,
+		def: ``,
+		spatk: ``,
+		spdef: ``,
+		speed: ``
 	},
 	{
 		name: ``,

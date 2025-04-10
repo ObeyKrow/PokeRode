@@ -5587,6 +5587,117 @@ module.exports = [
     jpname: "Psyhic Arceus"
     
   },
+  {
+    name: "Zacian",
+    frname: "Zacian",
+    dename: "Zacian",
+    jpname: "Zacian | Zacian | Zacian"
+  },
+   {
+    name: "complete-zygarde",
+    frname: "complete zygarde",
+    dename: "complete zygarde",
+    jpname: "100% ジガルデ"
+  },
+  {
+    name: "techno-the-pig",
+    frname: "Techno the pig",
+    dename: "Techno the pig",
+    jpname: "Techno the pig"
+  },
+  {
+    name: "50%-zygarde",
+    frname: "50% Zygarde",
+    dename: "50% Zygarde",
+    jpname: "50% Zygarde"
+  },
+  {
+    name: "corrupted-x",
+    frname: "Corrupted x",
+    dename: "Corrupted x",
+    jpname: "Corrupted x"
+  },
+  {
+    name: "swagger-bauz",
+    frname: "Swagger bauz",
+    dename: "Swagger bauz",
+    jpname: "Swagger bauz"
+  },
+  {
+    name: "birthday-obey",
+    frname: "birthday obey",
+    dename: "birthday obey",
+    jpname: "birthday obey"
+  },
+  {
+    name: "zaptres",
+    frname: "Zaptres",
+    dename: "Zaptres",
+    jpname: "ザプトレス"
+  },
+  {
+    name: "ultra-necrozma",
+    frname: "ultra necrozma",
+    dename: "ultra necrozma",
+    jpname: "ultra nekurozuma | ウルトラネクロズマ | ultra nekurozuma"
+  },
+  {
+    name: "prime-arceus",
+    frname: "Prime Arceus",
+    dename: "Prime Arceus",
+    jpname: "Prime Arceus"
+  },
+   {
+    name: "10%-zygarde",
+    frname: "10% zygarde",
+    dename: "10% zygarde",
+    jpname: "10% zygarde"
+  },
+  {
+    name: "core-zygarde",
+    frname: "Zygarde core",
+    dename: "Zygarde core",
+    jpname: "Zygarde core"
+  },
+  {
+    name: "black-kyurem",
+    frname: "Black kyurem",
+    dename: "Black kyurem",
+    jpname: "Black kyurem"
+  },
+   {
+    name: "white-kyurem",
+    frname: "White Kyurem",
+    dename: "White Kyurem",
+    jpname: "White Kyurem"
+  },
+  {
+    name: "regidrago",
+    frname: "Regidrago",
+    dename: "Regidrago",
+    jpname: "Regidrago"
+  },
+  {
+    name: "ice-rider-calyrex",
+    frname: "Ice Rider Calyrex",
+    dename: "Ice Rider Calyrex",
+    jpname: "Ice Rider Calyrex"
+  },
+  {
+    name: "shadow-rider-calyrex",
+    frname: "Shadow Rider Calyrex",
+    dename: "Shadow Rider Calyrex",
+    jpname: "Shadow Rider Calyrex"
+  },
+  {
+    name: "fullmoon-lunala",
+    frname: "Fullmoon Lunala",
+    dename: "Fullmoon Lunala",
+    jpname: "Fullmoon Lunala"
+  },
+  
+  
+  
 
   
 

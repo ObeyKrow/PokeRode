@@ -24,7 +24,9 @@ module.exports = {
     if (args[0].toLowerCase() === "latest") args[0] = parseInt(user.pokemons.length);
     if (args[0].toLowerCase() === "l") args[0] = parseInt(user.pokemons.length);
     if (args[0].toLowerCase() !== "all" && isNaN(args[0])) return message.channel.send(`Couldn't find/release 1 pokémon in this selection!`);
-      if(user.balance <= 300) return message.channel.send(`You don\'t have enough coins to wondertrade your pokemon `)
+      if(user.balance <= 3000) return message.channel.send(`You don\'t have enough coins to wondertrade your pokemon `)
+    user.balance = user.balance - 3000
+        await user.save()
   if (!user.pokemons[parseInt(args[0]) - 1]) return; //message.channel.send("You don't have a Pokémon with this number!");
 
     var num, name, embed;
@@ -134,6 +136,7 @@ let url;
 if (shiny) {
             url = `https://assets.poketwo.net/sprites/front-shiny/${t.id}.png?v=26`}
     await user.markModified(`pokemons`)
+       await user.save()
           message.reactions.removeAll();
           msg.reactions.removeAll();
            let embed2 = new MessageEmbed()

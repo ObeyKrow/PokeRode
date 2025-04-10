@@ -12,6 +12,7 @@ module.exports = {
     category: "information",
     usage: ["lb <type>"],
     cooldown: 3,
+   permissions: [],
     aliases: ["lb"],
 
     execute: async (client, message, args, prefix, guild, color, channel) => {
@@ -21,7 +22,7 @@ module.exports = {
        if(!user) return message.channel.send (`> <:x_mark:868344397211787275> **You must pick your starter pokémon with \`${prefix}start\` before using this command.**`);
 
 let embed = new MessageEmbed()
-.setAuthor(`Pokecool Leaderboard`)
+.setAuthor(`PokeRode Leaderboard`)
 .addField("credits Leaderboard",`\`${prefix}leaderboard credits\``)
 .addField("Shards Leaderboard",`\`${prefix}leaderboard shards\``)
 .addField("Redeems Leaderboard",`\`${prefix}leaderboard redeems\``)

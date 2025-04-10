@@ -23,6 +23,7 @@ module.exports = {
     category: 'Information',
     description: 'Check your favorites',
     usage: 'favorites',
+   permissions: [],
     aliases: ["fav", "f"],
     execute: async (client, message, args, prefix, guild, color, channel) => {
         let nguild = await Guild.findOne({ id: message.guild.id });

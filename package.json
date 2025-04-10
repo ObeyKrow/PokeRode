@@ -21,6 +21,7 @@
     "cpu-stat": "^2.0.1",
     "discord-buttons": "^4.0.0-deprecated",
     "discord.js": "^12.5.3",
+    "discord.js-pagination": "^1.0.3",
     "express": "^4.17.1",
     "hastebin-gen": "^2.0.5",
     "memory-cache": "^0.2.0",
